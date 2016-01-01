@@ -130,9 +130,8 @@ class TCCameraViewController: UIViewController {
 		})
 		
 		// Firebase'a root database object's location...
-		if let currentUser = FIRAuth.auth()?.currentUser {
+		if FIRAuth.auth()?.currentUser != nil {
 			// User is signed in.
-			
 			storageRef = FIRStorage.storage().reference()
 			
 		} else {
@@ -140,8 +139,6 @@ class TCCameraViewController: UIViewController {
 			performSegue(withIdentifier: "FROM_CAM_TO_AUTH", sender: nil)
 			
 		}
-		
-		
 		
 		self.magicSetup()
 		
