@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		D94B49631DBE77670035335B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49621DBE77670035335B /* AppDelegate.swift */; };
-		D94B49651DBE77670035335B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49641DBE77670035335B /* ViewController.swift */; };
 		D94B49681DBE77670035335B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94B49661DBE77670035335B /* Main.storyboard */; };
 		D94B496A1DBE77670035335B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94B49691DBE77670035335B /* Assets.xcassets */; };
 		D94B496D1DBE77670035335B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94B496B1DBE77670035335B /* LaunchScreen.storyboard */; };
 		D94B49781DBE77670035335B /* Toony_CamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49771DBE77670035335B /* Toony_CamTests.swift */; };
 		D94B49831DBE77670035335B /* Toony_CamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49821DBE77670035335B /* Toony_CamUITests.swift */; };
+		D94B49911DBE77D50035335B /* TCCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49901DBE77D50035335B /* TCCameraViewController.swift */; };
+		D94B49921DBE77D50035335B /* TCCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49901DBE77D50035335B /* TCCameraViewController.swift */; };
+		D94B49931DBE77D50035335B /* TCCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49901DBE77D50035335B /* TCCameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		D94B495F1DBE77670035335B /* Toony Cam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Toony Cam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94B49621DBE77670035335B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D94B49641DBE77670035335B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D94B49671DBE77670035335B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D94B49691DBE77670035335B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D94B496C1DBE77670035335B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		D94B497E1DBE77670035335B /* Toony CamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Toony CamUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94B49821DBE77670035335B /* Toony_CamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toony_CamUITests.swift; sourceTree = "<group>"; };
 		D94B49841DBE77670035335B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D94B49901DBE77D50035335B /* TCCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCCameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +100,11 @@
 			isa = PBXGroup;
 			children = (
 				D94B49621DBE77670035335B /* AppDelegate.swift */,
-				D94B49641DBE77670035335B /* ViewController.swift */,
 				D94B49661DBE77670035335B /* Main.storyboard */,
 				D94B49691DBE77670035335B /* Assets.xcassets */,
 				D94B496B1DBE77670035335B /* LaunchScreen.storyboard */,
 				D94B496E1DBE77670035335B /* Info.plist */,
+				D94B49901DBE77D50035335B /* TCCameraViewController.swift */,
 			);
 			path = "Toony Cam";
 			sourceTree = "<group>";
@@ -262,7 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D94B49651DBE77670035335B /* ViewController.swift in Sources */,
+				D94B49911DBE77D50035335B /* TCCameraViewController.swift in Sources */,
 				D94B49631DBE77670035335B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D94B49921DBE77D50035335B /* TCCameraViewController.swift in Sources */,
 				D94B49781DBE77670035335B /* Toony_CamTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D94B49931DBE77D50035335B /* TCCameraViewController.swift in Sources */,
 				D94B49831DBE77670035335B /* Toony_CamUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
