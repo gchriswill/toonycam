@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D94B49631DBE77670035335B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49621DBE77670035335B /* AppDelegate.swift */; };
+		D94B49651DBE77670035335B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49641DBE77670035335B /* ViewController.swift */; };
+		D94B49681DBE77670035335B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94B49661DBE77670035335B /* Main.storyboard */; };
+		D94B496A1DBE77670035335B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94B49691DBE77670035335B /* Assets.xcassets */; };
+		D94B496D1DBE77670035335B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94B496B1DBE77670035335B /* LaunchScreen.storyboard */; };
+		D94B49781DBE77670035335B /* Toony_CamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49771DBE77670035335B /* Toony_CamTests.swift */; };
+		D94B49831DBE77670035335B /* Toony_CamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49821DBE77670035335B /* Toony_CamUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D94B49741DBE77670035335B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D94B49571DBE77660035335B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D94B495E1DBE77660035335B;
+			remoteInfo = "Toony Cam";
+		};
+		D94B497F1DBE77670035335B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D94B49571DBE77660035335B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D94B495E1DBE77660035335B;
+			remoteInfo = "Toony Cam";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D94B495F1DBE77670035335B /* Toony Cam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Toony Cam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D94B49621DBE77670035335B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D94B49641DBE77670035335B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D94B49671DBE77670035335B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D94B49691DBE77670035335B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D94B496C1DBE77670035335B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D94B496E1DBE77670035335B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D94B49731DBE77670035335B /* Toony CamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Toony CamTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D94B49771DBE77670035335B /* Toony_CamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toony_CamTests.swift; sourceTree = "<group>"; };
+		D94B49791DBE77670035335B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D94B497E1DBE77670035335B /* Toony CamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Toony CamUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D94B49821DBE77670035335B /* Toony_CamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toony_CamUITests.swift; sourceTree = "<group>"; };
+		D94B49841DBE77670035335B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D94B495C1DBE77660035335B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D94B49701DBE77670035335B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D94B497B1DBE77670035335B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D94B49561DBE77660035335B = {
+			isa = PBXGroup;
+			children = (
+				D94B49611DBE77670035335B /* Toony Cam */,
+				D94B49761DBE77670035335B /* Toony CamTests */,
+				D94B49811DBE77670035335B /* Toony CamUITests */,
+				D94B49601DBE77670035335B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D94B49601DBE77670035335B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D94B495F1DBE77670035335B /* Toony Cam.app */,
+				D94B49731DBE77670035335B /* Toony CamTests.xctest */,
+				D94B497E1DBE77670035335B /* Toony CamUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D94B49611DBE77670035335B /* Toony Cam */ = {
+			isa = PBXGroup;
+			children = (
+				D94B49621DBE77670035335B /* AppDelegate.swift */,
+				D94B49641DBE77670035335B /* ViewController.swift */,
+				D94B49661DBE77670035335B /* Main.storyboard */,
+				D94B49691DBE77670035335B /* Assets.xcassets */,
+				D94B496B1DBE77670035335B /* LaunchScreen.storyboard */,
+				D94B496E1DBE77670035335B /* Info.plist */,
+			);
+			path = "Toony Cam";
+			sourceTree = "<group>";
+		};
+		D94B49761DBE77670035335B /* Toony CamTests */ = {
+			isa = PBXGroup;
+			children = (
+				D94B49771DBE77670035335B /* Toony_CamTests.swift */,
+				D94B49791DBE77670035335B /* Info.plist */,
+			);
+			path = "Toony CamTests";
+			sourceTree = "<group>";
+		};
+		D94B49811DBE77670035335B /* Toony CamUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D94B49821DBE77670035335B /* Toony_CamUITests.swift */,
+				D94B49841DBE77670035335B /* Info.plist */,
+			);
+			path = "Toony CamUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D94B495E1DBE77660035335B /* Toony Cam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D94B49871DBE77670035335B /* Build configuration list for PBXNativeTarget "Toony Cam" */;
+			buildPhases = (
+				D94B495B1DBE77660035335B /* Sources */,
+				D94B495C1DBE77660035335B /* Frameworks */,
+				D94B495D1DBE77660035335B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Toony Cam";
+			productName = "Toony Cam";
+			productReference = D94B495F1DBE77670035335B /* Toony Cam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D94B49721DBE77670035335B /* Toony CamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D94B498A1DBE77670035335B /* Build configuration list for PBXNativeTarget "Toony CamTests" */;
+			buildPhases = (
+				D94B496F1DBE77670035335B /* Sources */,
+				D94B49701DBE77670035335B /* Frameworks */,
+				D94B49711DBE77670035335B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D94B49751DBE77670035335B /* PBXTargetDependency */,
+			);
+			name = "Toony CamTests";
+			productName = "Toony CamTests";
+			productReference = D94B49731DBE77670035335B /* Toony CamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D94B497D1DBE77670035335B /* Toony CamUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D94B498D1DBE77670035335B /* Build configuration list for PBXNativeTarget "Toony CamUITests" */;
+			buildPhases = (
+				D94B497A1DBE77670035335B /* Sources */,
+				D94B497B1DBE77670035335B /* Frameworks */,
+				D94B497C1DBE77670035335B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D94B49801DBE77670035335B /* PBXTargetDependency */,
+			);
+			name = "Toony CamUITests";
+			productName = "Toony CamUITests";
+			productReference = D94B497E1DBE77670035335B /* Toony CamUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D94B49571DBE77660035335B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Parthenon Studios";
+				TargetAttributes = {
+					D94B495E1DBE77660035335B = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = A3RWZMX5HE;
+						ProvisioningStyle = Automatic;
+					};
+					D94B49721DBE77670035335B = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = A3RWZMX5HE;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D94B495E1DBE77660035335B;
+					};
+					D94B497D1DBE77670035335B = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = A3RWZMX5HE;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D94B495E1DBE77660035335B;
+					};
+				};
+			};
+			buildConfigurationList = D94B495A1DBE77660035335B /* Build configuration list for PBXProject "Toony Cam" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D94B49561DBE77660035335B;
+			productRefGroup = D94B49601DBE77670035335B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D94B495E1DBE77660035335B /* Toony Cam */,
+				D94B49721DBE77670035335B /* Toony CamTests */,
+				D94B497D1DBE77670035335B /* Toony CamUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D94B495D1DBE77660035335B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D94B496D1DBE77670035335B /* LaunchScreen.storyboard in Resources */,
+				D94B496A1DBE77670035335B /* Assets.xcassets in Resources */,
+				D94B49681DBE77670035335B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D94B49711DBE77670035335B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D94B497C1DBE77670035335B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D94B495B1DBE77660035335B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D94B49651DBE77670035335B /* ViewController.swift in Sources */,
+				D94B49631DBE77670035335B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D94B496F1DBE77670035335B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D94B49781DBE77670035335B /* Toony_CamTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D94B497A1DBE77670035335B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D94B49831DBE77670035335B /* Toony_CamUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D94B49751DBE77670035335B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D94B495E1DBE77660035335B /* Toony Cam */;
+			targetProxy = D94B49741DBE77670035335B /* PBXContainerItemProxy */;
+		};
+		D94B49801DBE77670035335B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D94B495E1DBE77660035335B /* Toony Cam */;
+			targetProxy = D94B497F1DBE77670035335B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D94B49661DBE77670035335B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D94B49671DBE77670035335B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D94B496B1DBE77670035335B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D94B496C1DBE77670035335B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D94B49851DBE77670035335B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D94B49861DBE77670035335B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D94B49881DBE77670035335B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A3RWZMX5HE;
+				INFOPLIST_FILE = "Toony Cam/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.gchriswill.Toony-Cam";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D94B49891DBE77670035335B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A3RWZMX5HE;
+				INFOPLIST_FILE = "Toony Cam/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.gchriswill.Toony-Cam";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		D94B498B1DBE77670035335B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = A3RWZMX5HE;
+				INFOPLIST_FILE = "Toony CamTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.gchriswill.Toony-CamTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Toony Cam.app/Toony Cam";
+			};
+			name = Debug;
+		};
+		D94B498C1DBE77670035335B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = A3RWZMX5HE;
+				INFOPLIST_FILE = "Toony CamTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.gchriswill.Toony-CamTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Toony Cam.app/Toony Cam";
+			};
+			name = Release;
+		};
+		D94B498E1DBE77670035335B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = A3RWZMX5HE;
+				INFOPLIST_FILE = "Toony CamUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.gchriswill.Toony-CamUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Toony Cam";
+			};
+			name = Debug;
+		};
+		D94B498F1DBE77670035335B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = A3RWZMX5HE;
+				INFOPLIST_FILE = "Toony CamUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.gchriswill.Toony-CamUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Toony Cam";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D94B495A1DBE77660035335B /* Build configuration list for PBXProject "Toony Cam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D94B49851DBE77670035335B /* Debug */,
+				D94B49861DBE77670035335B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D94B49871DBE77670035335B /* Build configuration list for PBXNativeTarget "Toony Cam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D94B49881DBE77670035335B /* Debug */,
+				D94B49891DBE77670035335B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D94B498A1DBE77670035335B /* Build configuration list for PBXNativeTarget "Toony CamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D94B498B1DBE77670035335B /* Debug */,
+				D94B498C1DBE77670035335B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D94B498D1DBE77670035335B /* Build configuration list for PBXNativeTarget "Toony CamUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D94B498E1DBE77670035335B /* Debug */,
+				D94B498F1DBE77670035335B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D94B49571DBE77660035335B /* Project object */;
+}
