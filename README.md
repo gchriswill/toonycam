@@ -1,6 +1,8 @@
 # MDVBS Final Project:
 
-### Toony Cam
+### Toony Cam 
+![Build](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat ) ![Version](https://img.shields.io/badge/version-0.0.1-blue.svg?style=flat ) ![Platform](https://img.shields.io/badge/platform-iOS--macOS-blue.svg?style=flat ) ![Issues](https://img.shields.io/badge/issues-0-yellow.svg?style=flat )  
+ 
 
 Brief intro here...
 
