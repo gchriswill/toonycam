@@ -49,6 +49,8 @@
 		D94B49821DBE77670035335B /* Toony_CamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toony_CamUITests.swift; sourceTree = "<group>"; };
 		D94B49841DBE77670035335B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D94B49901DBE77D50035335B /* TCCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCCameraViewController.swift; sourceTree = "<group>"; };
+		D94B49941DBE85B00035335B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		D94B49951DBE85B00035335B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +309,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D94B49671DBE77670035335B /* Base */,
+				D94B49941DBE85B00035335B /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D94B496C1DBE77670035335B /* Base */,
+				D94B49951DBE85B00035335B /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -326,6 +330,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -375,6 +380,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
