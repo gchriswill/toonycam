@@ -63,7 +63,7 @@ The project's source folder includes:
 
 ### Technical Test Devices:
 
-- iPod 6th Generation
+- iPod Touch 6th Generation
 - iPhone 5s
 - iPhone 6s
 - iPad Air 1
