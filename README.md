@@ -1,10 +1,18 @@
 # MDVBS Final Project:
 
 ### Toony Cam 
-![Build](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat ) ![Version](https://img.shields.io/badge/version-0.0.1-blue.svg?style=flat ) ![Platform](https://img.shields.io/badge/platform-iOS--macOS-blue.svg?style=flat ) ![Issues](https://img.shields.io/badge/issues-0-yellow.svg?style=flat )  
- 
 
-Brief intro here...
+![Issues](https://img.shields.io/badge/issues-0-yellow.svg?style=flat )
+![Version](https://img.shields.io/badge/version-0.0.1-blue.svg?style=flat )
+![Platform](https://img.shields.io/badge/platform-iOS--macOS-blue.svg?style=flat )
+![Build](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat )
+![Project Status](https://img.shields.io/badge/project%20status-on%20track-brightgreen.svg)
+![Project State](https://img.shields.io/badge/project state-ALPHA%2025%25-brightgreen.svg) 
+
+![ICON](https://raw.githubusercontent.com/gchriswill/1611-IPY-FINAL/master/Toony%20Cam/Assets.xcassets/AppIcon.appiconset/Icon%403x.png?token=AEXVpvyaibPsITe2q5_f_7tDyAcvHsl_ks5YGU70wA%3D%3D)
+
+Toony Cam is a live photo editing app where children can generate a cartoony selfie using a face filter overlay. 
+Toony Cam provides cartoony experiences that let children overcome visual limits and develop skills through the use of technology and imagery.
 
 ---
 
