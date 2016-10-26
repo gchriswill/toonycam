@@ -29,6 +29,23 @@ Project description here...
 **Website**: Not available yet...  
 **Github Repository:** [Toony Cam App Repository](#)  
 
+
+### Current Status:
+
+Detailed current status brief...
+
+### Supported Platforms:
+
+- iOS
+
+### Technical Test Devices:
+
+- iPod Touch (6th Generation)
+- iPhone 4s
+- iPhone 5s
+- iPhone 6s
+- iPad Air 1
+
 ### Overview Video:
 
 An in-depth and 20 minutes long, project overview and usage guide.
@@ -43,32 +60,6 @@ The project's source folder includes:
 - Project's full documentation
 - Project's UI assets
 - High and low resolution videos
-
-### First Usage Instructions:
-
-- Pre-Installation:
-  - Instructions before installing
-
-- On-Usage:
-  - Guides while using
-
-- Post-Installation:
-  - Instruction after installing
-
-### Current Status:
-
-- Project completion date has been reached.
-
-### Supported Platforms:
-
-- iOS, macOS
-
-### Technical Test Devices:
-
-- iPod Touch 6th Generation
-- iPhone 5s
-- iPhone 6s
-- iPad Air 1
 
 ---
 
