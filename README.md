@@ -13,11 +13,24 @@
 Toony Cam is a live photo editing app where children can generate a cartoony selfie using a face filter overlay. 
 Toony Cam provides cartoony experiences that let children overcome visual limits and develop skills through the use of technology and imagery.
 
+The Toonycam app allows its users to take a selfie image with a cartoon face filter applied automatically without any user interaction or manually applied as well, create their own cartoon themed masks, share them through the most popular social media networks and/or directly to friends, and save it to the cloud and/or locally to their device. Toonycam provides a vast library of graphics items such as ears, noses, eyes and mouths for creating custom themes. Combination of these items are limitless, and the process to create a filter helps children to use their creativity and enhance their logical skills, by their own or collaboratively with friends, in real-time...
+
 ---
 
-# Description:
+# Project Description:
 
-Project description here...
+This repo holds the source code of Toony Cam mobile application project for the Integrated Product Deployment class of the Mobile Development degree at Full Sail University. 
+
+Integrated Product Deployment is the FINAL class from the Mobile Development degree at Full Sail.  
+Toony Cam is Christopher Gonzalez's FINAL project for the Integrated Product Deployment class.
+
+The purposes of this repo are:
+
+- Providing commit history/changelog of the project, for its evaluation by the instructor.
+- Provide versioning control features to the project.
+- Use Github's project and repository management tools
+- Host all the source code remotely on Github as remote repository.
+- Host the project website with Github Pages.
 
 ---
 
@@ -48,7 +61,6 @@ Detailed current status brief...
 ### Technical Test Devices:
 
 - iPod Touch (6th Generation)
-- iPhone 4s
 - iPhone 5s
 - iPhone 6s
 - iPad Air 1
@@ -60,40 +72,57 @@ Overview video [here](#)
 
 ### Google Drive Location:
 
-[Toony Cam's Folder Location](#)  
+[Toony Cam's Folder Location](https://drive.google.com/drive/u/0/folders/0B7ReMDLGCLolT3Q4OW5HRTE0eU0)  
 
 The project's source folder includes:
 
 - Project's full documentation
 - Project's UI assets
+- Project's User Tests
 - High and low resolution videos
 
 ---
 
-# Final Feature List Breakdown:
+# Feature Sets:
 
-NOTE :warning: This breakdown is available as milestones on [Trello](#) and only individuals with granted access can view this trello board and it's card lists.
+| Core              | Support           | Supplemental            |
+| -------------     | -------------     | -------------           |
+| User Account      | Assets 1          | Assets 2                |
+| Selfie Capturing  | Selfie Editing    | Selfie Social Sharing   |
+| Selfie Gallery    | Filter Editing    | Location Services       |
+| Storage           |                   | Settings                |
+| Filter Gallery    |
+
+---
+
+# Milestones Breakdown:
+
+**IMPORTANT NOTE** :warning:  
+
+Aside with Github Project's management tools, this breakdown is available on [Trello](https://trello.com/b/YbKrcHcG/1611-ipy-final) and only individuals with granted access can view this trello board and it's card lists.
+
+Bellow, here are the Milestone cards on the and scehdule for this project. For more information, please visit the Project and Wiki of this project.
 
 - Milestone 1 - ALPHA:
-  - Features List:
+  - Features Set:
     - [x] [Feature 1](#)
     - [ ] [Feature 2](#)
     - [ ] [Feature 3](#)
     - [x] [Feature 4](#)
 - Milestone 2 - BETA:
-  - Features List:
+  - Features Set:
     - [x] [Feature 1](#)
     - [ ] [Feature 2](#)
     - [x] [Feature 3](#)
     - [ ] [Feature 4](#)
 - Milestone 3 - Release Candidate:
-  - Features List:
+  - Features Set:
     - [ ] [Feature 1](#)
     - [x] [Feature 2](#)
     - [ ] [Feature 3](#)
     - [x] [Feature 4](#)
 - Milestone 4 - GOLDEN MASTER:
-  - Features List:
+  - Features Set:
     - [ ] [Feature 1](#)
     - [x] [Feature 2](#)
     - [ ] [Feature 3](#)
