@@ -88,9 +88,9 @@ The project's source folder includes:
 | Core              | Support           | Supplemental            |
 | -------------     | -------------     | -------------           |
 | User Account      | Assets 1          | Assets 2                |
-| Selfie Capturing  | Selfie Editing    | Selfie Social Sharing   |
+| Selfie Capturing  | Selfie Editing    | Settings                |
 | Selfie Gallery    | Filter Editing    | Location Services       |
-| Storage           |                   | Settings                |
+| Storage           |                   | Selfie Social Sharing   |
 | Filter Gallery    |
 
 ---
