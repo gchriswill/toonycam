@@ -101,7 +101,7 @@ The project's source folder includes:
 
 Aside with Github Project's management tools, this breakdown is available on [Trello](https://trello.com/b/YbKrcHcG/1611-ipy-final) and only individuals with granted access can view this trello board and it's card lists.
 
-Bellow, here are the Milestone cards on the and scehdule for this project. For more information, please visit the Project and Wiki of this project.
+Bellow, here are the Milestone cards on the and scehdule for this project. For more information, please visit the Project and Wiki of this repository.
 
 - Milestone 1 - ALPHA:
   - Features Set:
