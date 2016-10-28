@@ -97,36 +97,14 @@ The project's source folder includes:
 
 # Milestones Breakdown:
 
-**IMPORTANT NOTE** :warning:  
-
-Aside with Github Project's management tools, this breakdown is available on [Trello](https://trello.com/b/YbKrcHcG/1611-ipy-final) and only individuals with granted access can view this trello board and it's card lists.
+> **IMPORTANT NOTE** :warning: Aside with Github Project's management tools, this breakdown is available on [Trello](https://trello.com/b/YbKrcHcG/1611-ipy-final) and only individuals with granted access can view this trello board and it's card lists.
 
 Bellow, here are the Milestone cards on the and scehdule for this project. For more information, please visit the Project and Wiki of this repository.
 
-- Milestone 1 - ALPHA:
-  - Features Set:
-    - [x] [Feature 1](#)
-    - [ ] [Feature 2](#)
-    - [ ] [Feature 3](#)
-    - [x] [Feature 4](#)
-- Milestone 2 - BETA:
-  - Features Set:
-    - [x] [Feature 1](#)
-    - [ ] [Feature 2](#)
-    - [x] [Feature 3](#)
-    - [ ] [Feature 4](#)
-- Milestone 3 - Release Candidate:
-  - Features Set:
-    - [ ] [Feature 1](#)
-    - [x] [Feature 2](#)
-    - [ ] [Feature 3](#)
-    - [x] [Feature 4](#)
-- Milestone 4 - GOLDEN MASTER:
-  - Features Set:
-    - [ ] [Feature 1](#)
-    - [x] [Feature 2](#)
-    - [ ] [Feature 3](#)
-    - [x] [Feature 4](#)
+- [ ] [Milestone 1 - ALPHA](https://github.com/gchriswill/1611-IPY-FINAL/milestone/1)
+- [ ] [Milestone 2 - BETA](https://github.com/gchriswill/1611-IPY-FINAL/milestone/2)
+- [ ] [Milestone 3 - Release Candidate](https://github.com/gchriswill/1611-IPY-FINAL/milestone/3)
+- [ ] [Milestone 4 - GOLDEN MASTER](https://github.com/gchriswill/1611-IPY-FINAL/milestone/4)
 
 ### License
 
