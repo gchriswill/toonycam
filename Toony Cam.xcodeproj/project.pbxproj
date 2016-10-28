@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D913FFB71DBFF59600FDFCD8 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913FFAC1DBFF59600FDFCD8 /* FirebaseAnalytics.framework */; };
+		D913FFB81DBFF59600FDFCD8 /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913FFAD1DBFF59600FDFCD8 /* FirebaseAuth.framework */; };
+		D913FFB91DBFF59600FDFCD8 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913FFAE1DBFF59600FDFCD8 /* FirebaseCore.framework */; };
+		D913FFBA1DBFF59600FDFCD8 /* FirebaseCrash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913FFAF1DBFF59600FDFCD8 /* FirebaseCrash.framework */; };
+		D913FFBB1DBFF59600FDFCD8 /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913FFB01DBFF59600FDFCD8 /* FirebaseDatabase.framework */; };
+		D913FFBC1DBFF59600FDFCD8 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913FFB11DBFF59600FDFCD8 /* FirebaseInstanceID.framework */; };
+		D913FFBD1DBFF59600FDFCD8 /* FirebaseStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913FFB21DBFF59600FDFCD8 /* FirebaseStorage.framework */; };
+		D913FFBE1DBFF59600FDFCD8 /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913FFB31DBFF59600FDFCD8 /* GoogleInterchangeUtilities.framework */; };
+		D913FFBF1DBFF59600FDFCD8 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913FFB41DBFF59600FDFCD8 /* GoogleSymbolUtilities.framework */; };
+		D913FFC01DBFF59600FDFCD8 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913FFB51DBFF59600FDFCD8 /* GoogleToolboxForMac.framework */; };
+		D913FFC11DBFF59600FDFCD8 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913FFB61DBFF59600FDFCD8 /* GTMSessionFetcher.framework */; };
 		D94B49631DBE77670035335B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49621DBE77670035335B /* AppDelegate.swift */; };
 		D94B49681DBE77670035335B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94B49661DBE77670035335B /* Main.storyboard */; };
 		D94B496A1DBE77670035335B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94B49691DBE77670035335B /* Assets.xcassets */; };
@@ -16,6 +27,7 @@
 		D94B49911DBE77D50035335B /* TCCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49901DBE77D50035335B /* TCCameraViewController.swift */; };
 		D94B49921DBE77D50035335B /* TCCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49901DBE77D50035335B /* TCCameraViewController.swift */; };
 		D94B49931DBE77D50035335B /* TCCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49901DBE77D50035335B /* TCCameraViewController.swift */; };
+		D9AB99F21DC01CAB00433259 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9AB99F11DC01CAB00433259 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +48,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D913FFAC1DBFF59600FDFCD8 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		D913FFAD1DBFF59600FDFCD8 /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Frameworks/FirebaseAuth.framework; sourceTree = "<group>"; };
+		D913FFAE1DBFF59600FDFCD8 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
+		D913FFAF1DBFF59600FDFCD8 /* FirebaseCrash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCrash.framework; path = Frameworks/FirebaseCrash.framework; sourceTree = "<group>"; };
+		D913FFB01DBFF59600FDFCD8 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		D913FFB11DBFF59600FDFCD8 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		D913FFB21DBFF59600FDFCD8 /* FirebaseStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseStorage.framework; path = Frameworks/FirebaseStorage.framework; sourceTree = "<group>"; };
+		D913FFB31DBFF59600FDFCD8 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		D913FFB41DBFF59600FDFCD8 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		D913FFB51DBFF59600FDFCD8 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = Frameworks/GoogleToolboxForMac.framework; sourceTree = "<group>"; };
+		D913FFB61DBFF59600FDFCD8 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = Frameworks/GTMSessionFetcher.framework; sourceTree = "<group>"; };
+		D913FFC21DBFF5DA00FDFCD8 /* Firebase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Frameworks/Firebase.h; sourceTree = "<group>"; };
+		D913FFC31DBFF5F500FDFCD8 /* Toony Cam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Toony Cam-Bridging-Header.h"; sourceTree = "<group>"; };
 		D94B495F1DBE77670035335B /* Toony Cam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Toony Cam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94B49621DBE77670035335B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D94B49671DBE77670035335B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +76,7 @@
 		D94B49901DBE77D50035335B /* TCCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCCameraViewController.swift; sourceTree = "<group>"; };
 		D94B49941DBE85B00035335B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		D94B49951DBE85B00035335B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D9AB99F11DC01CAB00433259 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +84,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D913FFBF1DBFF59600FDFCD8 /* GoogleSymbolUtilities.framework in Frameworks */,
+				D913FFC11DBFF59600FDFCD8 /* GTMSessionFetcher.framework in Frameworks */,
+				D913FFB71DBFF59600FDFCD8 /* FirebaseAnalytics.framework in Frameworks */,
+				D913FFBE1DBFF59600FDFCD8 /* GoogleInterchangeUtilities.framework in Frameworks */,
+				D913FFBC1DBFF59600FDFCD8 /* FirebaseInstanceID.framework in Frameworks */,
+				D913FFBA1DBFF59600FDFCD8 /* FirebaseCrash.framework in Frameworks */,
+				D913FFB81DBFF59600FDFCD8 /* FirebaseAuth.framework in Frameworks */,
+				D913FFB91DBFF59600FDFCD8 /* FirebaseCore.framework in Frameworks */,
+				D913FFBB1DBFF59600FDFCD8 /* FirebaseDatabase.framework in Frameworks */,
+				D913FFBD1DBFF59600FDFCD8 /* FirebaseStorage.framework in Frameworks */,
+				D913FFC01DBFF59600FDFCD8 /* GoogleToolboxForMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +115,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D92CAAFC1DBFD35E00922FF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D913FFC21DBFF5DA00FDFCD8 /* Firebase.h */,
+				D913FFAC1DBFF59600FDFCD8 /* FirebaseAnalytics.framework */,
+				D913FFAD1DBFF59600FDFCD8 /* FirebaseAuth.framework */,
+				D913FFAE1DBFF59600FDFCD8 /* FirebaseCore.framework */,
+				D913FFAF1DBFF59600FDFCD8 /* FirebaseCrash.framework */,
+				D913FFB01DBFF59600FDFCD8 /* FirebaseDatabase.framework */,
+				D913FFB11DBFF59600FDFCD8 /* FirebaseInstanceID.framework */,
+				D913FFB21DBFF59600FDFCD8 /* FirebaseStorage.framework */,
+				D913FFB31DBFF59600FDFCD8 /* GoogleInterchangeUtilities.framework */,
+				D913FFB41DBFF59600FDFCD8 /* GoogleSymbolUtilities.framework */,
+				D913FFB51DBFF59600FDFCD8 /* GoogleToolboxForMac.framework */,
+				D913FFB61DBFF59600FDFCD8 /* GTMSessionFetcher.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D94B49561DBE77660035335B = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +141,7 @@
 				D94B49761DBE77670035335B /* Toony CamTests */,
 				D94B49811DBE77670035335B /* Toony CamUITests */,
 				D94B49601DBE77670035335B /* Products */,
+				D92CAAFC1DBFD35E00922FF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,10 +160,12 @@
 			children = (
 				D94B49621DBE77670035335B /* AppDelegate.swift */,
 				D94B49661DBE77670035335B /* Main.storyboard */,
-				D94B49691DBE77670035335B /* Assets.xcassets */,
 				D94B496B1DBE77670035335B /* LaunchScreen.storyboard */,
-				D94B496E1DBE77670035335B /* Info.plist */,
+				D94B49691DBE77670035335B /* Assets.xcassets */,
 				D94B49901DBE77D50035335B /* TCCameraViewController.swift */,
+				D913FFC31DBFF5F500FDFCD8 /* Toony Cam-Bridging-Header.h */,
+				D94B496E1DBE77670035335B /* Info.plist */,
+				D9AB99F11DC01CAB00433259 /* GoogleService-Info.plist */,
 			);
 			path = "Toony Cam";
 			sourceTree = "<group>";
@@ -198,6 +257,7 @@
 					D94B495E1DBE77660035335B = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = A3RWZMX5HE;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					D94B49721DBE77670035335B = {
@@ -240,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D94B496D1DBE77670035335B /* LaunchScreen.storyboard in Resources */,
+				D9AB99F21DC01CAB00433259 /* GoogleService-Info.plist in Resources */,
 				D94B496A1DBE77670035335B /* Assets.xcassets in Resources */,
 				D94B49681DBE77670035335B /* Main.storyboard in Resources */,
 			);
@@ -353,6 +414,10 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -370,6 +435,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -403,6 +469,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -413,6 +483,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -423,11 +494,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = A3RWZMX5HE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "Toony Cam/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.gchriswill.Toony-Cam";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Toony Cam/Toony Cam-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -436,11 +514,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = A3RWZMX5HE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "Toony Cam/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.gchriswill.Toony-Cam";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Toony Cam/Toony Cam-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -522,6 +606,7 @@
 				D94B49891DBE77670035335B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D94B498A1DBE77670035335B /* Build configuration list for PBXNativeTarget "Toony CamTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +615,7 @@
 				D94B498C1DBE77670035335B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D94B498D1DBE77670035335B /* Build configuration list for PBXNativeTarget "Toony CamUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +624,7 @@
 				D94B498F1DBE77670035335B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
