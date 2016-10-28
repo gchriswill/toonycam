@@ -106,6 +106,8 @@ Bellow, here are the Milestone cards on the and scehdule for this project. For m
 - [ ] [Milestone 3 - Release Candidate](https://github.com/gchriswill/1611-IPY-FINAL/milestone/3)
 - [ ] [Milestone 4 - GOLDEN MASTER](https://github.com/gchriswill/1611-IPY-FINAL/milestone/4)
 
+---
+
 ### License
 
 Copyright (C) 2016 Christopher Gonzalez. All rights reserved.
