@@ -6,7 +6,7 @@
 ![Platform](https://img.shields.io/badge/platform-iOS-blue.svg?style=flat )
 ![Build](https://img.shields.io/badge/build-failing-red.svg?style=flat )
 ![Project Status](https://img.shields.io/badge/project%20status-behind%20track-red.svg)
-![Project State](https://img.shields.io/badge/project state-ALPHA%2025%25-brightgreen.svg) 
+![Project State](https://img.shields.io/badge/project state-ALPHA%2017%25-brightgreen.svg) 
 
 ![ICON](https://raw.githubusercontent.com/gchriswill/1611-IPY-FINAL/master/Toony%20Cam/Assets.xcassets/AppIcon.appiconset/Icon%403x.png?token=AEXVpvyaibPsITe2q5_f_7tDyAcvHsl_ks5YGU70wA%3D%3D)
 
