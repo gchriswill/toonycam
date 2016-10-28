@@ -6,14 +6,23 @@
 //  Copyright © 2016 Parthenon Studios. All rights reserved.
 //
 
+//Firebase ROOT database location: https://toony-cam.firebaseio.com/
+
 import UIKit
+import FirebaseDatabase
 
 class TCCameraViewController: UIViewController {
+    
+    var ref: FIRDatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // Firebase'a root database object's location...
+        ref = FIRDatabase.database().reference()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +30,6 @@ class TCCameraViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
