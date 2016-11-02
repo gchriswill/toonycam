@@ -10,21 +10,33 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 
 class TCCameraViewController: UIViewController {
     
     var ref: FIRDatabaseReference!
-
+    var canTakeShot = false
+    var canTravel = false
+    var isUiEnabled = false
+    var isFirstLaunch = true
+    
+    @IBOutlet weak var camControlPanel: TCCamControlPanel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         // Firebase'a root database object's location...
-        ref = FIRDatabase.database().reference()
+        if let user = FIRAuth.auth()?.currentUser {
+            // User is signed in.
+            ref = FIRDatabase.database().reference()
+        } else {
+            // No user is signed in.
+            performSegue(withIdentifier: "FROM_CAM_TO_AUTH", sender: nil)
+        }
         
+        print("\n FROM VIEW CON \n")
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -40,4 +52,41 @@ class TCCameraViewController: UIViewController {
     }
     */
 
+}
+
+extension TCCameraViewController: TCCamControlPanelDelegate {
+    
+    func didStartAnimatingPanelForActions() {
+        canTakeShot = false
+        canTravel = false
+        isUiEnabled = false
+    }
+    
+    func didFinishAnimatingPanelForAction(action: Int) {
+        canTakeShot = true
+        canTravel = true
+        isUiEnabled = true
+    }
+    
+    public func performCamAction(action:Int) {
+        
+        switch action {
+        case 1:
+            //Perform Segue to photo Library
+            print("TRAVELING TO PHOTOS")
+            break
+        case 2:
+            //Perfom take shot action
+            //Perfom Segue to Preview Results
+            print("TAKING SHOT EXECUTION")
+            break
+        case 3:
+            print("TRAVELING TO FILTERS")
+            //Perform Segue to filter library
+            break
+        default:
+            fatalError("THIS DEFAULT CASE MUST NEVER BE REACHED")
+            break
+        }
+    }
 }

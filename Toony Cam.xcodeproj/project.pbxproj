@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D904F3621DC8187600643883 /* TCAuthOptionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D904F3611DC8187600643883 /* TCAuthOptionsButton.swift */; };
 		D913FFB71DBFF59600FDFCD8 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913FFAC1DBFF59600FDFCD8 /* FirebaseAnalytics.framework */; };
 		D913FFB81DBFF59600FDFCD8 /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913FFAD1DBFF59600FDFCD8 /* FirebaseAuth.framework */; };
 		D913FFB91DBFF59600FDFCD8 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913FFAE1DBFF59600FDFCD8 /* FirebaseCore.framework */; };
@@ -18,6 +19,8 @@
 		D913FFBF1DBFF59600FDFCD8 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913FFB41DBFF59600FDFCD8 /* GoogleSymbolUtilities.framework */; };
 		D913FFC01DBFF59600FDFCD8 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913FFB51DBFF59600FDFCD8 /* GoogleToolboxForMac.framework */; };
 		D913FFC11DBFF59600FDFCD8 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913FFB61DBFF59600FDFCD8 /* GTMSessionFetcher.framework */; };
+		D935E06D1DC5430D00260F0B /* TCCamShotButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D935E06C1DC5430D00260F0B /* TCCamShotButton.swift */; };
+		D935E06F1DC5438200260F0B /* TCCamControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D935E06E1DC5438200260F0B /* TCCamControlPanel.swift */; };
 		D94B49631DBE77670035335B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49621DBE77670035335B /* AppDelegate.swift */; };
 		D94B49681DBE77670035335B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94B49661DBE77670035335B /* Main.storyboard */; };
 		D94B496A1DBE77670035335B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94B49691DBE77670035335B /* Assets.xcassets */; };
@@ -25,9 +28,16 @@
 		D94B49781DBE77670035335B /* Toony_CamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49771DBE77670035335B /* Toony_CamTests.swift */; };
 		D94B49831DBE77670035335B /* Toony_CamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49821DBE77670035335B /* Toony_CamUITests.swift */; };
 		D94B49911DBE77D50035335B /* TCCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49901DBE77D50035335B /* TCCameraViewController.swift */; };
-		D94B49921DBE77D50035335B /* TCCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49901DBE77D50035335B /* TCCameraViewController.swift */; };
-		D94B49931DBE77D50035335B /* TCCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49901DBE77D50035335B /* TCCameraViewController.swift */; };
+		D96A3DE41DC9F7AD00FDD2BD /* TCAuthCredentialsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96A3DE31DC9F7AD00FDD2BD /* TCAuthCredentialsPanel.swift */; };
+		D96A3DE61DC9F81A00FDD2BD /* TCAuthPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96A3DE51DC9F81A00FDD2BD /* TCAuthPanel.swift */; };
+		D972DF3F1DC6931A00B92FB1 /* TCCamButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D972DF3E1DC6931A00B92FB1 /* TCCamButton.swift */; };
+		D972DF411DC69BAB00B92FB1 /* TCAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D972DF401DC69BAB00B92FB1 /* TCAuthViewController.swift */; };
+		D972DF431DC69CB700B92FB1 /* TCAuthNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D972DF421DC69CB700B92FB1 /* TCAuthNavigationController.swift */; };
+		D97FD5D41DC3B9E100CDA22C /* TCRootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97FD5D31DC3B9E100CDA22C /* TCRootNavigationController.swift */; };
 		D9AB99F21DC01CAB00433259 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9AB99F11DC01CAB00433259 /* GoogleService-Info.plist */; };
+		D9E6379A1DC6AFDD002B2F7B /* TCAuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E637991DC6AFDD002B2F7B /* TCAuthButton.swift */; };
+		D9E637A01DC6B6C3002B2F7B /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9E637A21DC6B6C3002B2F7B /* Auth.storyboard */; };
+		D9E637A61DC72C64002B2F7B /* TCAuthOptionsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E637A51DC72C64002B2F7B /* TCAuthOptionsPanel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D904F3611DC8187600643883 /* TCAuthOptionsButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCAuthOptionsButton.swift; sourceTree = "<group>"; };
 		D913FFAC1DBFF59600FDFCD8 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
 		D913FFAD1DBFF59600FDFCD8 /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Frameworks/FirebaseAuth.framework; sourceTree = "<group>"; };
 		D913FFAE1DBFF59600FDFCD8 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
@@ -61,6 +72,8 @@
 		D913FFB61DBFF59600FDFCD8 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = Frameworks/GTMSessionFetcher.framework; sourceTree = "<group>"; };
 		D913FFC21DBFF5DA00FDFCD8 /* Firebase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Frameworks/Firebase.h; sourceTree = "<group>"; };
 		D913FFC31DBFF5F500FDFCD8 /* Toony Cam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Toony Cam-Bridging-Header.h"; sourceTree = "<group>"; };
+		D935E06C1DC5430D00260F0B /* TCCamShotButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCCamShotButton.swift; sourceTree = "<group>"; };
+		D935E06E1DC5438200260F0B /* TCCamControlPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCCamControlPanel.swift; sourceTree = "<group>"; };
 		D94B495F1DBE77670035335B /* Toony Cam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Toony Cam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94B49621DBE77670035335B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D94B49671DBE77670035335B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,7 +89,17 @@
 		D94B49901DBE77D50035335B /* TCCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCCameraViewController.swift; sourceTree = "<group>"; };
 		D94B49941DBE85B00035335B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		D94B49951DBE85B00035335B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D96A3DE31DC9F7AD00FDD2BD /* TCAuthCredentialsPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCAuthCredentialsPanel.swift; sourceTree = "<group>"; };
+		D96A3DE51DC9F81A00FDD2BD /* TCAuthPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCAuthPanel.swift; sourceTree = "<group>"; };
+		D972DF3E1DC6931A00B92FB1 /* TCCamButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCCamButton.swift; sourceTree = "<group>"; };
+		D972DF401DC69BAB00B92FB1 /* TCAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCAuthViewController.swift; sourceTree = "<group>"; };
+		D972DF421DC69CB700B92FB1 /* TCAuthNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCAuthNavigationController.swift; sourceTree = "<group>"; };
+		D97FD5D31DC3B9E100CDA22C /* TCRootNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCRootNavigationController.swift; sourceTree = "<group>"; };
 		D9AB99F11DC01CAB00433259 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D9E637991DC6AFDD002B2F7B /* TCAuthButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCAuthButton.swift; sourceTree = "<group>"; };
+		D9E637A11DC6B6C3002B2F7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
+		D9E637A41DC6B6C8002B2F7B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Auth.strings; sourceTree = "<group>"; };
+		D9E637A51DC72C64002B2F7B /* TCAuthOptionsPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCAuthOptionsPanel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,13 +182,16 @@
 			isa = PBXGroup;
 			children = (
 				D94B49621DBE77670035335B /* AppDelegate.swift */,
+				D97FD5D31DC3B9E100CDA22C /* TCRootNavigationController.swift */,
+				D9E637A71DC7CFE0002B2F7B /* Auth */,
+				D9E637A81DC7D001002B2F7B /* Cam */,
 				D94B49661DBE77670035335B /* Main.storyboard */,
+				D9E637A21DC6B6C3002B2F7B /* Auth.storyboard */,
 				D94B496B1DBE77670035335B /* LaunchScreen.storyboard */,
 				D94B49691DBE77670035335B /* Assets.xcassets */,
-				D94B49901DBE77D50035335B /* TCCameraViewController.swift */,
 				D913FFC31DBFF5F500FDFCD8 /* Toony Cam-Bridging-Header.h */,
-				D94B496E1DBE77670035335B /* Info.plist */,
 				D9AB99F11DC01CAB00433259 /* GoogleService-Info.plist */,
+				D94B496E1DBE77670035335B /* Info.plist */,
 			);
 			path = "Toony Cam";
 			sourceTree = "<group>";
@@ -186,6 +212,31 @@
 				D94B49841DBE77670035335B /* Info.plist */,
 			);
 			path = "Toony CamUITests";
+			sourceTree = "<group>";
+		};
+		D9E637A71DC7CFE0002B2F7B /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				D9E637991DC6AFDD002B2F7B /* TCAuthButton.swift */,
+				D904F3611DC8187600643883 /* TCAuthOptionsButton.swift */,
+				D96A3DE51DC9F81A00FDD2BD /* TCAuthPanel.swift */,
+				D9E637A51DC72C64002B2F7B /* TCAuthOptionsPanel.swift */,
+				D96A3DE31DC9F7AD00FDD2BD /* TCAuthCredentialsPanel.swift */,
+				D972DF401DC69BAB00B92FB1 /* TCAuthViewController.swift */,
+				D972DF421DC69CB700B92FB1 /* TCAuthNavigationController.swift */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
+		D9E637A81DC7D001002B2F7B /* Cam */ = {
+			isa = PBXGroup;
+			children = (
+				D94B49901DBE77D50035335B /* TCCameraViewController.swift */,
+				D935E06E1DC5438200260F0B /* TCCamControlPanel.swift */,
+				D935E06C1DC5430D00260F0B /* TCCamShotButton.swift */,
+				D972DF3E1DC6931A00B92FB1 /* TCCamButton.swift */,
+			);
+			name = Cam;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,7 +302,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Parthenon Studios";
 				TargetAttributes = {
 					D94B495E1DBE77660035335B = {
@@ -281,6 +332,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = D94B49561DBE77660035335B;
 			productRefGroup = D94B49601DBE77670035335B /* Products */;
@@ -301,6 +353,7 @@
 			files = (
 				D94B496D1DBE77670035335B /* LaunchScreen.storyboard in Resources */,
 				D9AB99F21DC01CAB00433259 /* GoogleService-Info.plist in Resources */,
+				D9E637A01DC6B6C3002B2F7B /* Auth.storyboard in Resources */,
 				D94B496A1DBE77670035335B /* Assets.xcassets in Resources */,
 				D94B49681DBE77670035335B /* Main.storyboard in Resources */,
 			);
@@ -327,8 +380,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D96A3DE61DC9F81A00FDD2BD /* TCAuthPanel.swift in Sources */,
+				D972DF431DC69CB700B92FB1 /* TCAuthNavigationController.swift in Sources */,
+				D904F3621DC8187600643883 /* TCAuthOptionsButton.swift in Sources */,
 				D94B49911DBE77D50035335B /* TCCameraViewController.swift in Sources */,
 				D94B49631DBE77670035335B /* AppDelegate.swift in Sources */,
+				D9E637A61DC72C64002B2F7B /* TCAuthOptionsPanel.swift in Sources */,
+				D9E6379A1DC6AFDD002B2F7B /* TCAuthButton.swift in Sources */,
+				D97FD5D41DC3B9E100CDA22C /* TCRootNavigationController.swift in Sources */,
+				D935E06F1DC5438200260F0B /* TCCamControlPanel.swift in Sources */,
+				D972DF411DC69BAB00B92FB1 /* TCAuthViewController.swift in Sources */,
+				D972DF3F1DC6931A00B92FB1 /* TCCamButton.swift in Sources */,
+				D96A3DE41DC9F7AD00FDD2BD /* TCAuthCredentialsPanel.swift in Sources */,
+				D935E06D1DC5430D00260F0B /* TCCamShotButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +400,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D94B49921DBE77D50035335B /* TCCameraViewController.swift in Sources */,
 				D94B49781DBE77670035335B /* Toony_CamTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,7 +408,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D94B49931DBE77D50035335B /* TCCameraViewController.swift in Sources */,
 				D94B49831DBE77670035335B /* Toony_CamUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +446,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		D9E637A21DC6B6C3002B2F7B /* Auth.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9E637A11DC6B6C3002B2F7B /* Base */,
+				D9E637A41DC6B6C8002B2F7B /* es */,
+			);
+			name = Auth.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -406,6 +477,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -432,7 +504,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -461,6 +533,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -481,7 +554,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
