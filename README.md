@@ -8,7 +8,7 @@
 ![Project Status](https://img.shields.io/badge/project%20status-behind%20track-red.svg)
 ![Project State](https://img.shields.io/badge/project state-ALPHA%2017%25-brightgreen.svg) 
 
-![ICON](https://raw.githubusercontent.com/gchriswill/1611-IPY-FINAL/master/Toony%20Cam/Assets.xcassets/AppIcon.appiconset/Icon%403x.png?token=AEXVpvyaibPsITe2q5_f_7tDyAcvHsl_ks5YGU70wA%3D%3D)
+![ICON](https://raw.githubusercontent.com/gchriswill/1611-IPY-FINAL/master/Toony%20Cam/Assets.xcassets/AppIcon.appiconset/Icon%403x.png?token=AEXVppPzEPux8ittGi6CoFnZmnEr6QpEks5YJVxWwA%3D%3D)
 
 Toony Cam is a live photo editing app where children can generate a cartoony selfie using a face filter overlay. 
 Toony Cam provides cartoony experiences that let children overcome visual limits and develop skills through the use of technology and imagery.
