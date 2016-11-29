@@ -3,3 +3,4 @@
 //
 
 #import "Firebase.h"
+#import <FBSDKLoginKit/FBSDKLoginKit.h>

@@ -19,6 +19,7 @@
 		D913FFBF1DBFF59600FDFCD8 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913FFB41DBFF59600FDFCD8 /* GoogleSymbolUtilities.framework */; };
 		D913FFC01DBFF59600FDFCD8 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913FFB51DBFF59600FDFCD8 /* GoogleToolboxForMac.framework */; };
 		D913FFC11DBFF59600FDFCD8 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913FFB61DBFF59600FDFCD8 /* GTMSessionFetcher.framework */; };
+		D93043AE1DDA4AE200A2B7BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D93043AD1DDA4AE200A2B7BF /* GoogleService-Info.plist */; };
 		D935E06D1DC5430D00260F0B /* TCCamShotButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D935E06C1DC5430D00260F0B /* TCCamShotButton.swift */; };
 		D935E06F1DC5438200260F0B /* TCCamControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D935E06E1DC5438200260F0B /* TCCamControlPanel.swift */; };
 		D94B49631DBE77670035335B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49621DBE77670035335B /* AppDelegate.swift */; };
@@ -28,16 +29,40 @@
 		D94B49781DBE77670035335B /* Toony_CamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49771DBE77670035335B /* Toony_CamTests.swift */; };
 		D94B49831DBE77670035335B /* Toony_CamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49821DBE77670035335B /* Toony_CamUITests.swift */; };
 		D94B49911DBE77D50035335B /* TCCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94B49901DBE77D50035335B /* TCCameraViewController.swift */; };
+		D94D90D41DCE7E630079826C /* TCAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D90D31DCE7E630079826C /* TCAccountViewController.swift */; };
+		D94D90D71DCEC6970079826C /* TCAccountNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D90D61DCEC6970079826C /* TCAccountNavigationController.swift */; };
+		D956A8101DD2623200715E89 /* Photos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D956A80F1DD2623200715E89 /* Photos.storyboard */; };
+		D956A8141DD272EF00715E89 /* TCPhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D956A8131DD272EF00715E89 /* TCPhotosCollectionViewController.swift */; };
+		D956A8161DD2731900715E89 /* TCPhotosNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D956A8151DD2731900715E89 /* TCPhotosNavigationController.swift */; };
+		D956A8181DD2735D00715E89 /* TCPhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D956A8171DD2735D00715E89 /* TCPhotosCollectionViewCell.swift */; };
+		D956A81A1DD273B100715E89 /* TCPreviewPhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D956A8191DD273B100715E89 /* TCPreviewPhotoCollectionViewController.swift */; };
+		D965BF8B1DD0AD9C0084CDC2 /* ToonyMagic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D965BF8A1DD0AD9C0084CDC2 /* ToonyMagic.swift */; };
 		D96A3DE41DC9F7AD00FDD2BD /* TCAuthCredentialsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96A3DE31DC9F7AD00FDD2BD /* TCAuthCredentialsPanel.swift */; };
 		D96A3DE61DC9F81A00FDD2BD /* TCAuthPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96A3DE51DC9F81A00FDD2BD /* TCAuthPanel.swift */; };
+		D96D84581DCC2D43006F2F59 /* TCAuthCredentialsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D84571DCC2D43006F2F59 /* TCAuthCredentialsButton.swift */; };
 		D972DF3F1DC6931A00B92FB1 /* TCCamButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D972DF3E1DC6931A00B92FB1 /* TCCamButton.swift */; };
 		D972DF411DC69BAB00B92FB1 /* TCAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D972DF401DC69BAB00B92FB1 /* TCAuthViewController.swift */; };
 		D972DF431DC69CB700B92FB1 /* TCAuthNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D972DF421DC69CB700B92FB1 /* TCAuthNavigationController.swift */; };
 		D97FD5D41DC3B9E100CDA22C /* TCRootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97FD5D31DC3B9E100CDA22C /* TCRootNavigationController.swift */; };
-		D9AB99F21DC01CAB00433259 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9AB99F11DC01CAB00433259 /* GoogleService-Info.plist */; };
+		D986DF8A1DE38A9C00E18895 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D986DF861DE38A9C00E18895 /* Fabric.framework */; };
+		D986DF8B1DE38A9C00E18895 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D986DF871DE38A9C00E18895 /* TwitterKit.framework */; };
+		D986DF8C1DE38A9C00E18895 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D986DF881DE38A9C00E18895 /* TwitterKitResources.bundle */; };
+		D986DF8D1DE38A9C00E18895 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D986DF891DE38A9C00E18895 /* TwitterCore.framework */; };
+		D986DF911DE38AB800E18895 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D986DF8E1DE38AB800E18895 /* Bolts.framework */; };
+		D986DF921DE38AB800E18895 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D986DF8F1DE38AB800E18895 /* FBSDKCoreKit.framework */; };
+		D986DF931DE38AB800E18895 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D986DF901DE38AB800E18895 /* FBSDKLoginKit.framework */; };
+		D986DF951DE38BBB00E18895 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D986DF941DE38BBB00E18895 /* FBSDKShareKit.framework */; };
+		D9CA8F631DEDE32B003D0F16 /* TCFavoriteFiltersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA8F621DEDE32B003D0F16 /* TCFavoriteFiltersCollectionViewCell.swift */; };
 		D9E6379A1DC6AFDD002B2F7B /* TCAuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E637991DC6AFDD002B2F7B /* TCAuthButton.swift */; };
 		D9E637A01DC6B6C3002B2F7B /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9E637A21DC6B6C3002B2F7B /* Auth.storyboard */; };
 		D9E637A61DC72C64002B2F7B /* TCAuthOptionsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E637A51DC72C64002B2F7B /* TCAuthOptionsPanel.swift */; };
+		D9EFEC581DCFEFCC0006D0EF /* TCFiltersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EFEC571DCFEFCC0006D0EF /* TCFiltersCollectionViewCell.swift */; };
+		D9EFEC5B1DD025480006D0EF /* Filters.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9EFEC591DD025480006D0EF /* Filters.storyboard */; };
+		D9EFEC5D1DD026990006D0EF /* TCPreviewCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EFEC5C1DD026990006D0EF /* TCPreviewCollectionViewController.swift */; };
+		D9FE706C1DCF0E7C00246525 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9FE706A1DCF0E7C00246525 /* Account.storyboard */; };
+		D9FE706E1DCF24CB00246525 /* TCAccLinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FE706D1DCF24CB00246525 /* TCAccLinkButton.swift */; };
+		D9FE70711DCF455F00246525 /* TCFiltersNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FE70701DCF455F00246525 /* TCFiltersNavigationController.swift */; };
+		D9FE70731DCF459500246525 /* TCFilterCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FE70721DCF459500246525 /* TCFilterCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +97,7 @@
 		D913FFB61DBFF59600FDFCD8 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = Frameworks/GTMSessionFetcher.framework; sourceTree = "<group>"; };
 		D913FFC21DBFF5DA00FDFCD8 /* Firebase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Frameworks/Firebase.h; sourceTree = "<group>"; };
 		D913FFC31DBFF5F500FDFCD8 /* Toony Cam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Toony Cam-Bridging-Header.h"; sourceTree = "<group>"; };
+		D93043AD1DDA4AE200A2B7BF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D935E06C1DC5430D00260F0B /* TCCamShotButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCCamShotButton.swift; sourceTree = "<group>"; };
 		D935E06E1DC5438200260F0B /* TCCamControlPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCCamControlPanel.swift; sourceTree = "<group>"; };
 		D94B495F1DBE77670035335B /* Toony Cam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Toony Cam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,17 +115,42 @@
 		D94B49901DBE77D50035335B /* TCCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCCameraViewController.swift; sourceTree = "<group>"; };
 		D94B49941DBE85B00035335B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		D94B49951DBE85B00035335B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D94D90D31DCE7E630079826C /* TCAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCAccountViewController.swift; sourceTree = "<group>"; };
+		D94D90D61DCEC6970079826C /* TCAccountNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCAccountNavigationController.swift; sourceTree = "<group>"; };
+		D956A80F1DD2623200715E89 /* Photos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Photos.storyboard; sourceTree = "<group>"; };
+		D956A8131DD272EF00715E89 /* TCPhotosCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCPhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		D956A8151DD2731900715E89 /* TCPhotosNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCPhotosNavigationController.swift; sourceTree = "<group>"; };
+		D956A8171DD2735D00715E89 /* TCPhotosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCPhotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		D956A8191DD273B100715E89 /* TCPreviewPhotoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCPreviewPhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		D965BF8A1DD0AD9C0084CDC2 /* ToonyMagic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToonyMagic.swift; sourceTree = "<group>"; };
 		D96A3DE31DC9F7AD00FDD2BD /* TCAuthCredentialsPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCAuthCredentialsPanel.swift; sourceTree = "<group>"; };
 		D96A3DE51DC9F81A00FDD2BD /* TCAuthPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCAuthPanel.swift; sourceTree = "<group>"; };
+		D96D84571DCC2D43006F2F59 /* TCAuthCredentialsButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCAuthCredentialsButton.swift; sourceTree = "<group>"; };
 		D972DF3E1DC6931A00B92FB1 /* TCCamButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCCamButton.swift; sourceTree = "<group>"; };
 		D972DF401DC69BAB00B92FB1 /* TCAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCAuthViewController.swift; sourceTree = "<group>"; };
 		D972DF421DC69CB700B92FB1 /* TCAuthNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCAuthNavigationController.swift; sourceTree = "<group>"; };
 		D97FD5D31DC3B9E100CDA22C /* TCRootNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCRootNavigationController.swift; sourceTree = "<group>"; };
-		D9AB99F11DC01CAB00433259 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D986DF861DE38A9C00E18895 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		D986DF871DE38A9C00E18895 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		D986DF881DE38A9C00E18895 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TwitterKitResources.bundle; sourceTree = "<group>"; };
+		D986DF891DE38A9C00E18895 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
+		D986DF8E1DE38AB800E18895 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		D986DF8F1DE38AB800E18895 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		D986DF901DE38AB800E18895 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		D986DF941DE38BBB00E18895 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		D9CA8F621DEDE32B003D0F16 /* TCFavoriteFiltersCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCFavoriteFiltersCollectionViewCell.swift; sourceTree = "<group>"; };
 		D9E637991DC6AFDD002B2F7B /* TCAuthButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCAuthButton.swift; sourceTree = "<group>"; };
 		D9E637A11DC6B6C3002B2F7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		D9E637A41DC6B6C8002B2F7B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Auth.strings; sourceTree = "<group>"; };
 		D9E637A51DC72C64002B2F7B /* TCAuthOptionsPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCAuthOptionsPanel.swift; sourceTree = "<group>"; };
+		D9EFEC571DCFEFCC0006D0EF /* TCFiltersCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCFiltersCollectionViewCell.swift; sourceTree = "<group>"; };
+		D9EFEC5A1DD025480006D0EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Filters.storyboard; sourceTree = "<group>"; };
+		D9EFEC5C1DD026990006D0EF /* TCPreviewCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCPreviewCollectionViewController.swift; sourceTree = "<group>"; };
+		D9FE706B1DCF0E7C00246525 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Account.storyboard; sourceTree = "<group>"; };
+		D9FE706D1DCF24CB00246525 /* TCAccLinkButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCAccLinkButton.swift; sourceTree = "<group>"; };
+		D9FE70701DCF455F00246525 /* TCFiltersNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCFiltersNavigationController.swift; sourceTree = "<group>"; };
+		D9FE70721DCF459500246525 /* TCFilterCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCFilterCollectionViewController.swift; sourceTree = "<group>"; };
+		D9FFA4061DCBEEFB00EEE8CE /* TCToonyFactory.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = TCToonyFactory.playground; path = "Toony Cam/TCToonyFactory.playground"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +158,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D986DF931DE38AB800E18895 /* FBSDKLoginKit.framework in Frameworks */,
+				D986DF911DE38AB800E18895 /* Bolts.framework in Frameworks */,
 				D913FFBF1DBFF59600FDFCD8 /* GoogleSymbolUtilities.framework in Frameworks */,
 				D913FFC11DBFF59600FDFCD8 /* GTMSessionFetcher.framework in Frameworks */,
 				D913FFB71DBFF59600FDFCD8 /* FirebaseAnalytics.framework in Frameworks */,
@@ -116,8 +169,13 @@
 				D913FFB81DBFF59600FDFCD8 /* FirebaseAuth.framework in Frameworks */,
 				D913FFB91DBFF59600FDFCD8 /* FirebaseCore.framework in Frameworks */,
 				D913FFBB1DBFF59600FDFCD8 /* FirebaseDatabase.framework in Frameworks */,
+				D986DF8D1DE38A9C00E18895 /* TwitterCore.framework in Frameworks */,
 				D913FFBD1DBFF59600FDFCD8 /* FirebaseStorage.framework in Frameworks */,
 				D913FFC01DBFF59600FDFCD8 /* GoogleToolboxForMac.framework in Frameworks */,
+				D986DF951DE38BBB00E18895 /* FBSDKShareKit.framework in Frameworks */,
+				D986DF921DE38AB800E18895 /* FBSDKCoreKit.framework in Frameworks */,
+				D986DF8B1DE38A9C00E18895 /* TwitterKit.framework in Frameworks */,
+				D986DF8A1DE38A9C00E18895 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +199,14 @@
 		D92CAAFC1DBFD35E00922FF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D986DF8E1DE38AB800E18895 /* Bolts.framework */,
+				D986DF8F1DE38AB800E18895 /* FBSDKCoreKit.framework */,
+				D986DF901DE38AB800E18895 /* FBSDKLoginKit.framework */,
+				D986DF941DE38BBB00E18895 /* FBSDKShareKit.framework */,
+				D986DF861DE38A9C00E18895 /* Fabric.framework */,
+				D986DF871DE38A9C00E18895 /* TwitterKit.framework */,
+				D986DF881DE38A9C00E18895 /* TwitterKitResources.bundle */,
+				D986DF891DE38A9C00E18895 /* TwitterCore.framework */,
 				D913FFC21DBFF5DA00FDFCD8 /* Firebase.h */,
 				D913FFAC1DBFF59600FDFCD8 /* FirebaseAnalytics.framework */,
 				D913FFAD1DBFF59600FDFCD8 /* FirebaseAuth.framework */,
@@ -160,6 +226,7 @@
 		D94B49561DBE77660035335B = {
 			isa = PBXGroup;
 			children = (
+				D9FFA4061DCBEEFB00EEE8CE /* TCToonyFactory.playground */,
 				D94B49611DBE77670035335B /* Toony Cam */,
 				D94B49761DBE77670035335B /* Toony CamTests */,
 				D94B49811DBE77670035335B /* Toony CamUITests */,
@@ -185,12 +252,13 @@
 				D97FD5D31DC3B9E100CDA22C /* TCRootNavigationController.swift */,
 				D9E637A71DC7CFE0002B2F7B /* Auth */,
 				D9E637A81DC7D001002B2F7B /* Cam */,
-				D94B49661DBE77670035335B /* Main.storyboard */,
-				D9E637A21DC6B6C3002B2F7B /* Auth.storyboard */,
+				D94D90D51DCE7E6B0079826C /* Account */,
+				D956A8111DD2623C00715E89 /* Photos */,
+				D9FE706F1DCF44F100246525 /* Filters */,
 				D94B496B1DBE77670035335B /* LaunchScreen.storyboard */,
 				D94B49691DBE77670035335B /* Assets.xcassets */,
+				D93043AD1DDA4AE200A2B7BF /* GoogleService-Info.plist */,
 				D913FFC31DBFF5F500FDFCD8 /* Toony Cam-Bridging-Header.h */,
-				D9AB99F11DC01CAB00433259 /* GoogleService-Info.plist */,
 				D94B496E1DBE77670035335B /* Info.plist */,
 			);
 			path = "Toony Cam";
@@ -214,16 +282,82 @@
 			path = "Toony CamUITests";
 			sourceTree = "<group>";
 		};
+		D94D90D51DCE7E6B0079826C /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				D9FE706D1DCF24CB00246525 /* TCAccLinkButton.swift */,
+				D94D90D31DCE7E630079826C /* TCAccountViewController.swift */,
+				D94D90D61DCEC6970079826C /* TCAccountNavigationController.swift */,
+				D9FE706A1DCF0E7C00246525 /* Account.storyboard */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		D956A80B1DD24D9100715E89 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				D904F3611DC8187600643883 /* TCAuthOptionsButton.swift */,
+				D9E637A51DC72C64002B2F7B /* TCAuthOptionsPanel.swift */,
+			);
+			name = Options;
+			sourceTree = "<group>";
+		};
+		D956A80C1DD24D9900715E89 /* Credentials */ = {
+			isa = PBXGroup;
+			children = (
+				D96D84571DCC2D43006F2F59 /* TCAuthCredentialsButton.swift */,
+				D96A3DE31DC9F7AD00FDD2BD /* TCAuthCredentialsPanel.swift */,
+			);
+			name = Credentials;
+			sourceTree = "<group>";
+		};
+		D956A80D1DD24DCF00715E89 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				D935E06E1DC5438200260F0B /* TCCamControlPanel.swift */,
+				D935E06C1DC5430D00260F0B /* TCCamShotButton.swift */,
+			);
+			name = Control;
+			sourceTree = "<group>";
+		};
+		D956A80E1DD24DF700715E89 /* Preview Filter */ = {
+			isa = PBXGroup;
+			children = (
+				D9EFEC5C1DD026990006D0EF /* TCPreviewCollectionViewController.swift */,
+			);
+			name = "Preview Filter";
+			sourceTree = "<group>";
+		};
+		D956A8111DD2623C00715E89 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				D956A8121DD2625D00715E89 /* Preview Photo */,
+				D956A8171DD2735D00715E89 /* TCPhotosCollectionViewCell.swift */,
+				D956A8131DD272EF00715E89 /* TCPhotosCollectionViewController.swift */,
+				D956A8151DD2731900715E89 /* TCPhotosNavigationController.swift */,
+				D956A80F1DD2623200715E89 /* Photos.storyboard */,
+			);
+			name = Photos;
+			sourceTree = "<group>";
+		};
+		D956A8121DD2625D00715E89 /* Preview Photo */ = {
+			isa = PBXGroup;
+			children = (
+				D956A8191DD273B100715E89 /* TCPreviewPhotoCollectionViewController.swift */,
+			);
+			name = "Preview Photo";
+			sourceTree = "<group>";
+		};
 		D9E637A71DC7CFE0002B2F7B /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				D9E637991DC6AFDD002B2F7B /* TCAuthButton.swift */,
-				D904F3611DC8187600643883 /* TCAuthOptionsButton.swift */,
+				D956A80C1DD24D9900715E89 /* Credentials */,
+				D956A80B1DD24D9100715E89 /* Options */,
 				D96A3DE51DC9F81A00FDD2BD /* TCAuthPanel.swift */,
-				D9E637A51DC72C64002B2F7B /* TCAuthOptionsPanel.swift */,
-				D96A3DE31DC9F7AD00FDD2BD /* TCAuthCredentialsPanel.swift */,
+				D9E637991DC6AFDD002B2F7B /* TCAuthButton.swift */,
 				D972DF401DC69BAB00B92FB1 /* TCAuthViewController.swift */,
 				D972DF421DC69CB700B92FB1 /* TCAuthNavigationController.swift */,
+				D9E637A21DC6B6C3002B2F7B /* Auth.storyboard */,
 			);
 			name = Auth;
 			sourceTree = "<group>";
@@ -231,12 +365,26 @@
 		D9E637A81DC7D001002B2F7B /* Cam */ = {
 			isa = PBXGroup;
 			children = (
+				D956A80D1DD24DCF00715E89 /* Control */,
+				D9CA8F621DEDE32B003D0F16 /* TCFavoriteFiltersCollectionViewCell.swift */,
 				D94B49901DBE77D50035335B /* TCCameraViewController.swift */,
-				D935E06E1DC5438200260F0B /* TCCamControlPanel.swift */,
-				D935E06C1DC5430D00260F0B /* TCCamShotButton.swift */,
 				D972DF3E1DC6931A00B92FB1 /* TCCamButton.swift */,
+				D965BF8A1DD0AD9C0084CDC2 /* ToonyMagic.swift */,
+				D94B49661DBE77670035335B /* Main.storyboard */,
 			);
 			name = Cam;
+			sourceTree = "<group>";
+		};
+		D9FE706F1DCF44F100246525 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				D956A80E1DD24DF700715E89 /* Preview Filter */,
+				D9EFEC571DCFEFCC0006D0EF /* TCFiltersCollectionViewCell.swift */,
+				D9FE70721DCF459500246525 /* TCFilterCollectionViewController.swift */,
+				D9FE70701DCF455F00246525 /* TCFiltersNavigationController.swift */,
+				D9EFEC591DD025480006D0EF /* Filters.storyboard */,
+			);
+			name = Filters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +397,7 @@
 				D94B495B1DBE77660035335B /* Sources */,
 				D94B495C1DBE77660035335B /* Frameworks */,
 				D94B495D1DBE77660035335B /* Resources */,
+				D986DF961DE3A2BE00E18895 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -301,6 +450,9 @@
 		D94B49571DBE77660035335B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					filters,
+				);
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Parthenon Studios";
@@ -352,9 +504,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D94B496D1DBE77670035335B /* LaunchScreen.storyboard in Resources */,
-				D9AB99F21DC01CAB00433259 /* GoogleService-Info.plist in Resources */,
+				D93043AE1DDA4AE200A2B7BF /* GoogleService-Info.plist in Resources */,
 				D9E637A01DC6B6C3002B2F7B /* Auth.storyboard in Resources */,
 				D94B496A1DBE77670035335B /* Assets.xcassets in Resources */,
+				D9FE706C1DCF0E7C00246525 /* Account.storyboard in Resources */,
+				D956A8101DD2623200715E89 /* Photos.storyboard in Resources */,
+				D9EFEC5B1DD025480006D0EF /* Filters.storyboard in Resources */,
+				D986DF8C1DE38A9C00E18895 /* TwitterKitResources.bundle in Resources */,
 				D94B49681DBE77670035335B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,18 +531,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D986DF961DE3A2BE00E18895 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run ad824682c63946db86e74e3b5dae12ed9128dff8 b334a2c2f564e7ab6556c5d30558a1e11843dc98a9edbad7af146b1c8462000b";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D94B495B1DBE77660035335B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D96A3DE61DC9F81A00FDD2BD /* TCAuthPanel.swift in Sources */,
+				D956A81A1DD273B100715E89 /* TCPreviewPhotoCollectionViewController.swift in Sources */,
+				D956A8181DD2735D00715E89 /* TCPhotosCollectionViewCell.swift in Sources */,
 				D972DF431DC69CB700B92FB1 /* TCAuthNavigationController.swift in Sources */,
 				D904F3621DC8187600643883 /* TCAuthOptionsButton.swift in Sources */,
 				D94B49911DBE77D50035335B /* TCCameraViewController.swift in Sources */,
+				D956A8141DD272EF00715E89 /* TCPhotosCollectionViewController.swift in Sources */,
 				D94B49631DBE77670035335B /* AppDelegate.swift in Sources */,
 				D9E637A61DC72C64002B2F7B /* TCAuthOptionsPanel.swift in Sources */,
+				D9FE70711DCF455F00246525 /* TCFiltersNavigationController.swift in Sources */,
+				D94D90D71DCEC6970079826C /* TCAccountNavigationController.swift in Sources */,
+				D956A8161DD2731900715E89 /* TCPhotosNavigationController.swift in Sources */,
+				D9CA8F631DEDE32B003D0F16 /* TCFavoriteFiltersCollectionViewCell.swift in Sources */,
+				D9FE70731DCF459500246525 /* TCFilterCollectionViewController.swift in Sources */,
+				D965BF8B1DD0AD9C0084CDC2 /* ToonyMagic.swift in Sources */,
 				D9E6379A1DC6AFDD002B2F7B /* TCAuthButton.swift in Sources */,
+				D9FE706E1DCF24CB00246525 /* TCAccLinkButton.swift in Sources */,
+				D94D90D41DCE7E630079826C /* TCAccountViewController.swift in Sources */,
+				D9EFEC5D1DD026990006D0EF /* TCPreviewCollectionViewController.swift in Sources */,
+				D96D84581DCC2D43006F2F59 /* TCAuthCredentialsButton.swift in Sources */,
+				D9EFEC581DCFEFCC0006D0EF /* TCFiltersCollectionViewCell.swift in Sources */,
 				D97FD5D41DC3B9E100CDA22C /* TCRootNavigationController.swift in Sources */,
 				D935E06F1DC5438200260F0B /* TCCamControlPanel.swift in Sources */,
 				D972DF411DC69BAB00B92FB1 /* TCAuthViewController.swift in Sources */,
@@ -455,6 +641,22 @@
 			name = Auth.storyboard;
 			sourceTree = "<group>";
 		};
+		D9EFEC591DD025480006D0EF /* Filters.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9EFEC5A1DD025480006D0EF /* Base */,
+			);
+			name = Filters.storyboard;
+			sourceTree = "<group>";
+		};
+		D9FE706A1DCF0E7C00246525 /* Account.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9FE706B1DCF0E7C00246525 /* Base */,
+			);
+			name = Account.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -499,6 +701,7 @@
 					"$(inherited)",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
@@ -549,6 +752,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
@@ -572,14 +776,18 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
 				);
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = NO;
 				INFOPLIST_FILE = "Toony Cam/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.gchriswill.Toony-Cam";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Toony Cam/Toony Cam-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -592,13 +800,17 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
 				);
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = NO;
 				INFOPLIST_FILE = "Toony Cam/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.gchriswill.Toony-Cam";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Toony Cam/Toony Cam-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

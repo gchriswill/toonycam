@@ -8,30 +8,61 @@
 
 import UIKit
 
-@IBDesignable
+
 class TCAuthOptionsPanel: TCAuthPanel {
-    
-    @IBOutlet weak var title: UILabel!
-    
+	
+	@IBOutlet weak var facebookButton: TCAuthOptionsButton!
+	@IBOutlet weak var twitterButton: TCAuthOptionsButton!
+	
+	@IBOutlet weak var facebookButtonSpinner: UIActivityIndicatorView!
+	@IBOutlet weak var twitterButtonSpinner: UIActivityIndicatorView!
+	
     @IBAction func cancelAction(_ sender:UIButton){
-        animateOptionsPanel(direction: .down)
+		
+		facebookButtonSpinner.stopAnimating()
+		twitterButtonSpinner.stopAnimating()
+		self.authState = "Canceling..."
+		self.animatePanel(panelId: self.tag, direction: .down)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        if touches.first!.view!.tag == 11 {
+        switch touches.first!.view!.tag  {
+        case 13:
             print("TCAuthOptionsPanel --> Facebook")
-            
-        }
-        
-        if touches.first!.view!.tag == 12 {
-            print("TCAuthOptionsPanel --> Google+")
-            
-        }
-
-        if touches.first!.view!.tag == 13 {
+			
+			twitterButtonSpinner.stopAnimating()
+			twitterButton.setTitle("Twitter", for: .normal)
+			
+			facebookButton.setTitle("", for: .normal)
+			facebookButtonSpinner.startAnimating()
+			
+			self.next?.touchesBegan(touches, with: event)
+			
+            break
+        case 14:
+            print("TCAuthOptionsPanel --> Twitter")
+			
+			facebookButtonSpinner.stopAnimating()
+			facebookButton.setTitle("Facebook", for: .normal)
+			
+			twitterButton.setTitle("", for: .normal)
+			twitterButtonSpinner.startAnimating()
+			
+			self.next?.touchesBegan(touches, with: event)
+			
+			break
+        case 15:
             print("TCAuthOptionsPanel --> Username")
-            animateOptionsPanel(direction: .left)
+			
+			facebookButtonSpinner.stopAnimating()
+			twitterButtonSpinner.stopAnimating()
+			
+            self.delegate.travelingToPanel(panelId: 20)
+            break
+        default:
+            print("TCAuthOptionsPanel --> Default")
+            break
         }
     }
 }

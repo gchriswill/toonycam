@@ -55,7 +55,7 @@ class TCCamShotButton: TCCamButton {
             
             // Material Button Inner Animations
             let effectlayer = CALayer()
-            effectlayer.name = "materialButtonEffectWhite"
+            effectlayer.name = "materialButt    onEffectWhite"
             effectlayer.frame = CGRect(origin: CGPoint(x: self.layer.bounds.midX, y: self.layer.bounds.midY), size: CGSize())
             effectlayer.backgroundColor = UIColor.white.cgColor
             effectlayer.zPosition = -1

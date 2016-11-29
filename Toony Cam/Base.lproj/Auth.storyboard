@@ -26,6 +26,9 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RCG-sp-q0R" kind="relationship" relationship="rootViewController" id="9DP-8A-T4k"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixW-9a-PJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,17 +43,17 @@
                         <viewControllerLayoutGuide type="bottom" id="NQE-c2-P27"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Dg6-pa-kLV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toonycam_icon_v2" translatesAutoresizingMaskIntoConstraints="NO" id="XqQ-s3-7Le">
-                                <rect key="frame" x="0.0" y="20" width="320" height="320"/>
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toonycam_icon_v2_3" translatesAutoresizingMaskIntoConstraints="NO" id="XqQ-s3-7Le">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="XqQ-s3-7Le" secondAttribute="height" multiplier="1:1" id="oyb-Az-Zpr"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a Toony Account!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgp-yu-ylg">
-                                <rect key="frame" x="66" y="263" width="188" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a Toony Account!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgp-yu-ylg">
+                                <rect key="frame" x="66" y="267" width="188" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="188" id="Ku6-8W-qb7"/>
                                     <constraint firstAttribute="height" constant="21" id="Pqg-2w-sxQ"/>
@@ -62,8 +65,8 @@
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.38" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUy-l0-hNZ" customClass="TCAuthButton" customModule="Toony_Cam" customModuleProvider="target">
-                                <rect key="frame" x="78" y="292" width="165" height="48"/>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUy-l0-hNZ" customClass="TCAuthButton" customModule="Toony_Cam" customModuleProvider="target">
+                                <rect key="frame" x="78" y="296" width="165" height="48"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="cbJ-Ey-ubD"/>
@@ -87,15 +90,15 @@
                                         <real key="value" value="0.20000000000000001"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="tcShadowRadius">
-                                        <real key="value" value="2"/>
+                                        <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="tcRadius">
-                                        <real key="value" value="6"/>
+                                        <real key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already a Toony pro?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flE-UO-dN1">
-                                <rect key="frame" x="66" y="372" width="188" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already a Toony pro?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flE-UO-dN1">
+                                <rect key="frame" x="66" y="352" width="188" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="5Fj-Xo-Sw8"/>
                                     <constraint firstAttribute="width" secondItem="flE-UO-dN1" secondAttribute="height" multiplier="188:21" id="7fO-lk-dms"/>
@@ -107,8 +110,8 @@
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.38" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHr-KT-ams" customClass="TCAuthButton" customModule="Toony_Cam" customModuleProvider="target">
-                                <rect key="frame" x="78" y="401" width="165" height="48"/>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHr-KT-ams" customClass="TCAuthButton" customModule="Toony_Cam" customModuleProvider="target">
+                                <rect key="frame" x="78" y="381" width="165" height="48"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wHr-KT-ams" secondAttribute="height" multiplier="55:16" id="GOz-02-f3a"/>
@@ -131,15 +134,15 @@
                                         <real key="value" value="0.20000000000000001"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="tcShadowRadius">
-                                        <real key="value" value="2"/>
+                                        <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="tcRadius">
-                                        <real key="value" value="6"/>
+                                        <real key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jo-wr-wzN">
-                                <rect key="frame" x="66" y="514" width="188" height="42"/>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jo-wr-wzN">
+                                <rect key="frame" x="66" y="450" width="188" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0jo-wr-wzN" secondAttribute="height" multiplier="94:15" constant="-75.199999999999989" id="KLG-et-pW1"/>
                                     <constraint firstAttribute="height" constant="42" id="Lic-xy-mKJ"/>
@@ -148,22 +151,38 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="tintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
-                                <state key="normal" title="Countinuing without an account">
+                                <state key="normal" title="Countinue without an account?">
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.38" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Cqv-S5-OzD" kind="unwind" unwindAction="unwindToCamWithSegue:" id="bLD-cM-6Vg"/>
+                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8q-uN-axn" customClass="TCAuthPanel" customModule="Toony_Cam" customModuleProvider="target">
-                                <rect key="frame" x="32" y="122.5" width="256" height="323"/>
+                            <view tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8q-uN-axn" customClass="TCAuthOptionsPanel" customModule="Toony_Cam" customModuleProvider="target">
+                                <rect key="frame" x="32" y="90.5" width="256" height="298"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account Options" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ch-wS-QTj">
-                                        <rect key="frame" x="37" y="8" width="183" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Options" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ch-wS-QTj">
+                                        <rect key="frame" x="64.5" y="15" width="128" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.38" colorSpace="calibratedRGB"/>
                                         <size key="shadowOffset" width="0.0" height="1"/>
                                     </label>
-                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ggy-d1-3J6" customClass="TCAuthOptionsButton" customModule="Toony_Cam" customModuleProvider="target">
+                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaF-m1-Law">
+                                        <rect key="frame" x="212" y="7.5" width="36" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="0za-6f-OqQ"/>
+                                            <constraint firstAttribute="width" constant="36" id="wQF-NT-9CF"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="0.0" height="1"/>
+                                        <state key="normal" image="ic_close_white_36pt"/>
+                                        <connections>
+                                            <action selector="cancelAction:" destination="b8q-uN-axn" eventType="touchUpInside" id="ClB-h2-3Iw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ggy-d1-3J6" customClass="TCAuthOptionsButton" customModule="Toony_Cam" customModuleProvider="target">
                                         <rect key="frame" x="46" y="59" width="165" height="48"/>
                                         <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -187,16 +206,24 @@
                                                 <real key="value" value="0.20000000000000001"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="tcShadowRadius">
-                                                <real key="value" value="2"/>
+                                                <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="tcRadius">
-                                                <real key="value" value="6"/>
+                                                <real key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLG-MV-sLC" customClass="TCAuthOptionsButton" customModule="Toony_Cam" customModuleProvider="target">
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="S78-fo-qkf">
+                                        <rect key="frame" x="110" y="64.5" width="37" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="9SU-zg-ECB"/>
+                                            <constraint firstAttribute="width" constant="37" id="vB4-1t-wmf"/>
+                                        </constraints>
+                                        <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </activityIndicatorView>
+                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLG-MV-sLC" customClass="TCAuthOptionsButton" customModule="Toony_Cam" customModuleProvider="target">
                                         <rect key="frame" x="46" y="127" width="165" height="48"/>
-                                        <color key="backgroundColor" red="0.82745098039215681" green="0.28235294117647058" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.12941176470588234" green="0.63529411764705879" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="JPP-ma-51M"/>
                                             <constraint firstAttribute="width" secondItem="QLG-MV-sLC" secondAttribute="height" multiplier="55:16" id="Vjk-bb-vky"/>
@@ -204,7 +231,7 @@
                                         </constraints>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <size key="titleShadowOffset" width="0.0" height="1"/>
-                                        <state key="normal" title="Google">
+                                        <state key="normal" title="Twitter">
                                             <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.38" colorSpace="calibratedRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -218,14 +245,22 @@
                                                 <real key="value" value="0.20000000000000001"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="tcShadowRadius">
-                                                <real key="value" value="2"/>
+                                                <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="tcRadius">
-                                                <real key="value" value="6"/>
+                                                <real key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cY-ST-jq6" customClass="TCAuthOptionsButton" customModule="Toony_Cam" customModuleProvider="target">
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="I5V-AE-OFU">
+                                        <rect key="frame" x="110" y="132.5" width="37" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="37" id="Mjd-vS-Mad"/>
+                                            <constraint firstAttribute="height" constant="37" id="UOm-uo-GLc"/>
+                                        </constraints>
+                                        <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </activityIndicatorView>
+                                    <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cY-ST-jq6" customClass="TCAuthOptionsButton" customModule="Toony_Cam" customModuleProvider="target">
                                         <rect key="frame" x="46" y="215" width="165" height="48"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -235,7 +270,7 @@
                                         </constraints>
                                         <color key="tintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <size key="titleShadowOffset" width="0.0" height="1"/>
-                                        <state key="normal" title="Username">
+                                        <state key="normal" title="Email">
                                             <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.38" colorSpace="calibratedRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -249,39 +284,29 @@
                                                 <real key="value" value="0.14999999999999999"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="tcShadowRadius">
-                                                <real key="value" value="1.5"/>
+                                                <real key="value" value="2.5"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="tcRadius">
-                                                <real key="value" value="6"/>
+                                                <real key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaF-m1-Law">
-                                        <rect key="frame" x="104" y="285" width="48" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="NaF-m1-Law" secondAttribute="height" multiplier="8:5" id="1Cs-BH-6it"/>
-                                            <constraint firstAttribute="width" constant="48" id="KKM-7r-MP4"/>
-                                            <constraint firstAttribute="height" constant="30" id="b7B-7F-Ofx"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="tintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <size key="titleShadowOffset" width="0.0" height="1"/>
-                                        <state key="normal" title="Cancel">
-                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.38" colorSpace="calibratedRGB"/>
-                                        </state>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="QLG-MV-sLC" firstAttribute="top" secondItem="Ggy-d1-3J6" secondAttribute="bottom" constant="20" id="0Wj-bf-jS5"/>
-                                    <constraint firstItem="NaF-m1-Law" firstAttribute="top" secondItem="2cY-ST-jq6" secondAttribute="bottom" constant="22" id="5qn-De-9aA"/>
-                                    <constraint firstItem="Ggy-d1-3J6" firstAttribute="top" secondItem="7Ch-wS-QTj" secondAttribute="bottom" constant="29" id="6gD-qK-McQ"/>
+                                    <constraint firstItem="I5V-AE-OFU" firstAttribute="centerY" secondItem="QLG-MV-sLC" secondAttribute="centerY" id="2EO-9G-p7C"/>
+                                    <constraint firstItem="Ggy-d1-3J6" firstAttribute="top" secondItem="7Ch-wS-QTj" secondAttribute="bottom" constant="22.5" id="6gD-qK-McQ"/>
                                     <constraint firstItem="2cY-ST-jq6" firstAttribute="centerX" secondItem="QLG-MV-sLC" secondAttribute="centerX" id="C7P-KK-9Kc"/>
+                                    <constraint firstAttribute="trailing" secondItem="NaF-m1-Law" secondAttribute="trailing" constant="8" id="EZJ-Zf-oEH"/>
+                                    <constraint firstItem="NaF-m1-Law" firstAttribute="top" secondItem="b8q-uN-axn" secondAttribute="top" constant="7.5" id="J1o-xz-ewr"/>
                                     <constraint firstItem="Ggy-d1-3J6" firstAttribute="centerX" secondItem="7Ch-wS-QTj" secondAttribute="centerX" id="KuY-bI-koL"/>
-                                    <constraint firstAttribute="height" constant="323" id="WBt-Nr-7oW"/>
-                                    <constraint firstItem="NaF-m1-Law" firstAttribute="centerX" secondItem="2cY-ST-jq6" secondAttribute="centerX" id="WcW-4O-9DS"/>
-                                    <constraint firstItem="7Ch-wS-QTj" firstAttribute="centerY" secondItem="b8q-uN-axn" secondAttribute="centerY" constant="-142.5" id="fKp-TH-yQI"/>
+                                    <constraint firstItem="I5V-AE-OFU" firstAttribute="centerX" secondItem="QLG-MV-sLC" secondAttribute="centerX" id="Mi3-a6-xCi"/>
+                                    <constraint firstItem="S78-fo-qkf" firstAttribute="centerX" secondItem="Ggy-d1-3J6" secondAttribute="centerX" id="UPC-QY-l3s"/>
+                                    <constraint firstAttribute="height" constant="298" id="WBt-Nr-7oW"/>
+                                    <constraint firstItem="7Ch-wS-QTj" firstAttribute="centerY" secondItem="b8q-uN-axn" secondAttribute="centerY" constant="-123.5" id="fKp-TH-yQI"/>
                                     <constraint firstItem="QLG-MV-sLC" firstAttribute="centerX" secondItem="Ggy-d1-3J6" secondAttribute="centerX" id="mfe-CL-yc7"/>
+                                    <constraint firstItem="S78-fo-qkf" firstAttribute="centerY" secondItem="Ggy-d1-3J6" secondAttribute="centerY" id="nfF-69-rUo"/>
                                     <constraint firstItem="7Ch-wS-QTj" firstAttribute="centerX" secondItem="b8q-uN-axn" secondAttribute="centerX" id="pXK-cV-EQ5"/>
                                     <constraint firstAttribute="width" constant="256" id="ppj-br-1ZK"/>
                                     <constraint firstItem="2cY-ST-jq6" firstAttribute="top" secondItem="QLG-MV-sLC" secondAttribute="bottom" constant="40" id="sKZ-6K-A1G"/>
@@ -301,41 +326,218 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outlet property="controlPanelMover" destination="5ch-Ca-uiG" id="ssG-Ur-vYd"/>
-                                    <outlet property="controlPanelSlider" destination="adV-OI-7qd" id="OSK-07-xiG"/>
+                                    <outlet property="controlPanelMover" destination="adV-OI-7qd" id="Hwx-bw-ZGe"/>
+                                    <outlet property="controlPanelSlider" destination="5ch-Ca-uiG" id="0xv-qm-qa3"/>
+                                    <outlet property="facebookButton" destination="Ggy-d1-3J6" id="ps7-ro-ttJ"/>
+                                    <outlet property="facebookButtonSpinner" destination="S78-fo-qkf" id="iXz-IS-F5J"/>
+                                    <outlet property="title" destination="7Ch-wS-QTj" id="mIb-6c-RQw"/>
+                                    <outlet property="twitterButton" destination="QLG-MV-sLC" id="Sg3-gE-Q9r"/>
+                                    <outlet property="twitterButtonSpinner" destination="I5V-AE-OFU" id="MkT-eG-s2y"/>
+                                </connections>
+                            </view>
+                            <view tag="20" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2C5-Na-aFU" customClass="TCAuthCredentialsPanel" customModule="Toony_Cam" customModuleProvider="target">
+                                <rect key="frame" x="32" y="90" width="256" height="298"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TDO-M2-OnM">
+                                        <rect key="frame" x="14" y="58" width="228" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="228" id="hc6-aX-hr0"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RQQ-yO-eJr">
+                                        <rect key="frame" x="14" y="102" width="228" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="228" id="5cq-K2-U8T"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qzD-3X-I1K">
+                                        <rect key="frame" x="14" y="146" width="228" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="228" id="f3v-Vo-3gt"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="27" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P7C-vi-ebV">
+                                        <rect key="frame" x="14" y="190" width="228" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="228" id="WP6-H3-v19"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <button opaque="NO" tag="28" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hja-gA-EJU" customClass="TCAuthCredentialsButton" customModule="Toony_Cam" customModuleProvider="target">
+                                        <rect key="frame" x="46" y="234" width="165" height="48"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="LRn-M0-WPe"/>
+                                            <constraint firstAttribute="width" constant="165" id="T1M-fs-3eq"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="0.0" height="1"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.38" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="tcShadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="tcShadowOffset">
+                                                <size key="value" width="0.0" height="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="tcShadowOpacity">
+                                                <real key="value" value="0.14999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="tcShadowRadius">
+                                                <real key="value" value="2.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="tcRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1c-jR-acI">
+                                        <rect key="frame" x="8" y="8" width="36" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="Ejn-wL-zKe"/>
+                                            <constraint firstAttribute="height" constant="36" id="azv-xa-fiN"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="0.0" height="1"/>
+                                        <state key="normal" image="ic_arrow_back_white_36pt">
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.38" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backAction:" destination="2C5-Na-aFU" eventType="touchUpInside" id="xvV-10-32t"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0D-2w-Zs5">
+                                        <rect key="frame" x="212" y="8" width="36" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="KSv-v8-YSB"/>
+                                            <constraint firstAttribute="width" constant="36" id="MDU-7U-YAe"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="0.0" height="1"/>
+                                        <state key="normal" image="ic_close_white_36pt"/>
+                                        <connections>
+                                            <action selector="cancelAction:" destination="2C5-Na-aFU" eventType="touchUpInside" id="IUm-Xd-6ht"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="22" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credentials" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q24-R9-9qp">
+                                        <rect key="frame" x="85" y="16.5" width="87" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.38" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="0.0" height="1"/>
+                                    </label>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dFv-NH-4jn">
+                                        <rect key="frame" x="110" y="240" width="37" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="37" id="tMg-51-dVW"/>
+                                            <constraint firstAttribute="height" constant="37" id="y2t-j7-rbq"/>
+                                        </constraints>
+                                        <color key="color" red="0.77647058820000003" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="RQQ-yO-eJr" firstAttribute="top" secondItem="TDO-M2-OnM" secondAttribute="bottom" constant="14" id="53e-Zr-EWX"/>
+                                    <constraint firstItem="L0D-2w-Zs5" firstAttribute="top" secondItem="2C5-Na-aFU" secondAttribute="top" constant="8" id="6La-qX-S42"/>
+                                    <constraint firstItem="P7C-vi-ebV" firstAttribute="top" secondItem="qzD-3X-I1K" secondAttribute="bottom" constant="14" id="6ME-mp-0ia"/>
+                                    <constraint firstItem="e1c-jR-acI" firstAttribute="top" secondItem="2C5-Na-aFU" secondAttribute="top" constant="8" id="9SY-zp-iA4"/>
+                                    <constraint firstItem="dFv-NH-4jn" firstAttribute="centerY" secondItem="Hja-gA-EJU" secondAttribute="centerY" id="Cty-kV-30m"/>
+                                    <constraint firstItem="q24-R9-9qp" firstAttribute="centerY" secondItem="2C5-Na-aFU" secondAttribute="centerY" constant="-122.25" id="DxU-tT-nCC"/>
+                                    <constraint firstAttribute="height" constant="298" id="FyQ-hO-KQN"/>
+                                    <constraint firstItem="P7C-vi-ebV" firstAttribute="centerX" secondItem="2C5-Na-aFU" secondAttribute="centerX" id="MAL-88-Fwq"/>
+                                    <constraint firstItem="RQQ-yO-eJr" firstAttribute="centerX" secondItem="2C5-Na-aFU" secondAttribute="centerX" id="MAc-Hi-1n7"/>
+                                    <constraint firstItem="TDO-M2-OnM" firstAttribute="centerX" secondItem="2C5-Na-aFU" secondAttribute="centerX" id="NOP-lP-7FE"/>
+                                    <constraint firstItem="e1c-jR-acI" firstAttribute="leading" secondItem="2C5-Na-aFU" secondAttribute="leading" constant="8" id="PC2-Pc-nL6"/>
+                                    <constraint firstItem="Hja-gA-EJU" firstAttribute="top" secondItem="P7C-vi-ebV" secondAttribute="bottom" constant="14" id="QHg-AI-vPP"/>
+                                    <constraint firstItem="q24-R9-9qp" firstAttribute="centerX" secondItem="2C5-Na-aFU" secondAttribute="centerX" id="SoI-CU-LMt"/>
+                                    <constraint firstAttribute="trailing" secondItem="L0D-2w-Zs5" secondAttribute="trailing" constant="8" id="UIP-5o-gYF"/>
+                                    <constraint firstItem="dFv-NH-4jn" firstAttribute="centerX" secondItem="Hja-gA-EJU" secondAttribute="centerX" id="aNm-Jr-6Ec"/>
+                                    <constraint firstItem="Hja-gA-EJU" firstAttribute="centerX" secondItem="2C5-Na-aFU" secondAttribute="centerX" id="gRu-YO-ViD"/>
+                                    <constraint firstItem="TDO-M2-OnM" firstAttribute="top" secondItem="q24-R9-9qp" secondAttribute="bottom" constant="20.5" id="h1d-eM-LZf"/>
+                                    <constraint firstAttribute="width" constant="256" id="rGX-Yr-zuH"/>
+                                    <constraint firstItem="qzD-3X-I1K" firstAttribute="centerX" secondItem="2C5-Na-aFU" secondAttribute="centerX" id="u0d-8h-pba"/>
+                                    <constraint firstItem="qzD-3X-I1K" firstAttribute="top" secondItem="RQQ-yO-eJr" secondAttribute="bottom" constant="14" id="zIV-xf-iwM"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="tcRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="tcShadowRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="tcShadowOpacity">
+                                        <real key="value" value="0.14999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="tcShadowOffset">
+                                        <size key="value" width="0.0" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="authenticateButton" destination="Hja-gA-EJU" id="VWE-GC-4ek"/>
+                                    <outlet property="confirmTextField" destination="P7C-vi-ebV" id="uq6-S6-x7A"/>
+                                    <outlet property="controlPanelMover" destination="Atz-ZR-zG1" id="fIr-vO-pMb"/>
+                                    <outlet property="controlPanelSlider" destination="7Zi-rj-ktv" id="GPJ-4S-ceG"/>
+                                    <outlet property="emailTextField" destination="RQQ-yO-eJr" id="IlT-qm-Yem"/>
+                                    <outlet property="loader" destination="dFv-NH-4jn" id="Kvx-q7-j4R"/>
+                                    <outlet property="passwordTextField" destination="qzD-3X-I1K" id="Vi0-9V-IoB"/>
+                                    <outlet property="title" destination="q24-R9-9qp" id="ZIq-x8-Et2"/>
+                                    <outlet property="usernameTextField" destination="TDO-M2-OnM" id="m5b-Ug-hT8"/>
                                 </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="XqQ-s3-7Le" secondAttribute="trailing" constant="-16" id="0Lq-wN-xOf"/>
-                            <constraint firstItem="qUy-l0-hNZ" firstAttribute="bottom" secondItem="XqQ-s3-7Le" secondAttribute="bottom" id="1T1-uq-pXf"/>
+                            <constraint firstItem="qUy-l0-hNZ" firstAttribute="bottom" secondItem="XqQ-s3-7Le" secondAttribute="bottom" constant="24" id="1T1-uq-pXf"/>
                             <constraint firstItem="wHr-KT-ams" firstAttribute="top" secondItem="flE-UO-dN1" secondAttribute="bottom" constant="8" id="3WH-bZ-MpY"/>
                             <constraint firstItem="XqQ-s3-7Le" firstAttribute="top" secondItem="LGK-2S-KtU" secondAttribute="bottom" id="3w6-tI-cJV"/>
                             <constraint firstItem="XqQ-s3-7Le" firstAttribute="leading" secondItem="Dg6-pa-kLV" secondAttribute="leadingMargin" constant="-16" id="3wW-69-wGa"/>
                             <constraint firstItem="qUy-l0-hNZ" firstAttribute="top" secondItem="Kgp-yu-ylg" secondAttribute="bottom" constant="8" id="5Vc-Zz-8aG"/>
                             <constraint firstItem="b8q-uN-axn" firstAttribute="centerX" secondItem="Dg6-pa-kLV" secondAttribute="centerX" id="5ch-Ca-uiG"/>
+                            <constraint firstItem="2C5-Na-aFU" firstAttribute="centerX" secondItem="Dg6-pa-kLV" secondAttribute="centerX" id="7Zi-rj-ktv"/>
                             <constraint firstItem="qUy-l0-hNZ" firstAttribute="centerX" secondItem="XqQ-s3-7Le" secondAttribute="centerX" id="8Mg-U0-fbs"/>
-                            <constraint firstItem="flE-UO-dN1" firstAttribute="top" secondItem="qUy-l0-hNZ" secondAttribute="bottom" constant="32" id="MHB-T4-Lq1"/>
+                            <constraint firstItem="2C5-Na-aFU" firstAttribute="centerY" secondItem="Dg6-pa-kLV" secondAttribute="centerY" constant="-13" id="Atz-ZR-zG1"/>
+                            <constraint firstItem="flE-UO-dN1" firstAttribute="top" secondItem="qUy-l0-hNZ" secondAttribute="bottom" constant="8" id="MHB-T4-Lq1"/>
                             <constraint firstItem="flE-UO-dN1" firstAttribute="centerX" secondItem="qUy-l0-hNZ" secondAttribute="centerX" id="N64-TD-Ezb"/>
                             <constraint firstItem="Kgp-yu-ylg" firstAttribute="centerX" secondItem="qUy-l0-hNZ" secondAttribute="centerX" id="NeI-n3-cUP"/>
                             <constraint firstItem="NQE-c2-P27" firstAttribute="top" secondItem="0jo-wr-wzN" secondAttribute="bottom" constant="12" id="SzK-lm-fLU"/>
-                            <constraint firstItem="b8q-uN-axn" firstAttribute="centerY" secondItem="Dg6-pa-kLV" secondAttribute="centerY" id="adV-OI-7qd"/>
+                            <constraint firstItem="b8q-uN-axn" firstAttribute="centerY" secondItem="Dg6-pa-kLV" secondAttribute="centerY" constant="-12.5" id="adV-OI-7qd"/>
                             <constraint firstItem="0jo-wr-wzN" firstAttribute="centerX" secondItem="wHr-KT-ams" secondAttribute="centerX" id="n5v-EL-VZW"/>
                             <constraint firstItem="wHr-KT-ams" firstAttribute="centerX" secondItem="flE-UO-dN1" secondAttribute="centerX" id="v3g-8B-jZd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NMF-C4-Ghx"/>
                     <connections>
+                        <outlet property="createButton" destination="qUy-l0-hNZ" id="5qd-sw-JIY"/>
+                        <outlet property="credentialsPanel" destination="2C5-Na-aFU" id="fE3-cA-I9G"/>
+                        <outlet property="loginButton" destination="wHr-KT-ams" id="cVx-1d-2p4"/>
+                        <outlet property="noAccountButton" destination="0jo-wr-wzN" id="Noh-SL-VYW"/>
                         <outlet property="optionsPanel" destination="b8q-uN-axn" id="vE4-Kd-qKw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEV-WX-B9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Cqv-S5-OzD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3226.875" y="-1125"/>
         </scene>
     </scenes>
     <resources>
-        <image name="toonycam_icon_v2" width="1024" height="1024"/>
+        <image name="ic_arrow_back_white_36pt" width="36" height="36"/>
+        <image name="ic_close_white_36pt" width="36" height="36"/>
+        <image name="toonycam_icon_v2_3" width="1024" height="1024"/>
     </resources>
 </document>

@@ -12,7 +12,7 @@ import UIKit
 class TCAuthButton: UIButton {
     
     var isAnimating = false
-    
+        
     @IBInspectable var tcRadius:CGFloat = 0 {
         didSet{
             self.layer.cornerRadius = self.tcRadius
@@ -116,6 +116,14 @@ class TCAuthButton: UIButton {
 }
 
 extension TCAuthButton: CAAnimationDelegate {
+    
+    func show(buttonId:Int) {
+        
+    }
+    
+    func hide(buttonId:Int) {
+        
+    }
     
     func animationDidStart(_ anim: CAAnimation) {
         
