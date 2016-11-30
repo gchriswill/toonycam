@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Filters-->
+        <scene sceneID="M3q-Ah-PTB">
+            <objects>
+                <collectionViewController storyboardIdentifier="TC_FILTERS_VC_0" title="Filters" id="OLO-Da-Z0K" customClass="TCFilterCollectionViewController" customModule="Toony_Cam" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Wy1-gh-kvy">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="hc0-81-paj">
+                            <size key="itemSize" width="85" height="85"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="16" minY="16" maxX="16" maxY="16"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TC_FILTERS_CELL" id="odZ-PY-G6f" customClass="TCFiltersCollectionViewCell" customModule="Toony_Cam" customModuleProvider="target">
+                                <rect key="frame" x="16" y="16" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HSG-zU-srJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="HSG-zU-srJ" secondAttribute="height" multiplier="1:1" id="YQb-TZ-lLh"/>
+                                            </constraints>
+                                        </imageView>
+                                        <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pzv-3g-7HD" customClass="TCAccLinkButton" customModule="Toony_Cam" customModuleProvider="target">
+                                            <rect key="frame" x="-3" y="-3" width="72" height="72"/>
+                                            <color key="backgroundColor" red="0.83529411760000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="72" id="MTY-uW-Pl5"/>
+                                                <constraint firstAttribute="height" constant="72" id="WJ0-ik-VtS"/>
+                                                <constraint firstAttribute="width" secondItem="Pzv-3g-7HD" secondAttribute="height" multiplier="1:1" id="YrP-AE-78h"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <state key="normal" image="ic_share_white_36pt"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="tcRadius">
+                                                    <real key="value" value="36"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="tcShadowRadius">
+                                                    <real key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="tcShadowColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="tcShadowOpacity">
+                                                    <real key="value" value="0.40000000000000002"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="tcShadowOffset">
+                                                    <size key="value" width="0.0" height="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="shareAction:" destination="odZ-PY-G6f" eventType="touchUpInside" id="VnG-xX-pjy"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.25295964340490795" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Pzv-3g-7HD" secondAttribute="trailing" constant="8" id="1q5-GI-OWo"/>
+                                    <constraint firstItem="HSG-zU-srJ" firstAttribute="top" secondItem="odZ-PY-G6f" secondAttribute="topMargin" constant="-8" id="5ih-vP-egB"/>
+                                    <constraint firstItem="HSG-zU-srJ" firstAttribute="leading" secondItem="odZ-PY-G6f" secondAttribute="leadingMargin" constant="-8" id="hRw-4R-MRs"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="Pzv-3g-7HD" secondAttribute="bottom" constant="8" id="khH-Bm-KNl"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="HSG-zU-srJ" secondAttribute="trailing" constant="-8" id="ozp-SY-Ink"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="tcRadius">
+                                        <real key="value" value="8.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="imageCell" destination="HSG-zU-srJ" id="3c0-Te-zl6"/>
+                                    <outlet property="shareButton" destination="Pzv-3g-7HD" id="ZvD-5d-dHm"/>
+                                    <segue destination="rFK-si-FmI" kind="show" identifier="FROM_CAM_TO_FILTERS" id="4o6-tL-jy8">
+                                        <segue key="commit" inheritsFrom="parent" id="wxv-TG-wH9"/>
+                                        <segue key="preview" inheritsFrom="commit" id="3Pr-HW-IbM"/>
+                                    </segue>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="OLO-Da-Z0K" id="5bz-4G-plm"/>
+                            <outlet property="delegate" destination="OLO-Da-Z0K" id="zgH-ko-4CI"/>
+                        </connections>
+                    </collectionView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="w22-AK-4yS">
+                        <leftBarButtonItems>
+                            <barButtonItem image="ic_close_white_36pt" id="OAZ-QR-itT">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="8CT-y0-awP" kind="unwind" unwindAction="unwindToCamWithSegue:" id="EUM-GE-WwO"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="ic_help_white_36pt" id="nMi-bC-UPG">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <rightBarButtonItems>
+                            <barButtonItem image="ic_add_white_36pt" id="9MA-aj-O4a">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </barButtonItem>
+                            <barButtonItem systemItem="edit" id="ft4-hm-Ghv">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JLS-uG-j5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="8CT-y0-awP" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2674" y="1762"/>
+        </scene>
+        <!--Filters-->
+        <scene sceneID="fu7-tY-cyr">
+            <objects>
+                <navigationController storyboardIdentifier="TC_FILTERS_NAV_VC_0" automaticallyAdjustsScrollViewInsets="NO" id="UvL-Hw-ej6" customClass="TCFiltersNavigationController" customModule="Toony_Cam" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Filters" image="ic_face_white_36pt" id="xCZ-Js-J9Y"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="YDO-tW-ZYh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OLO-Da-Z0K" kind="relationship" relationship="rootViewController" id="WAE-SQ-OxY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ufi-Yd-8af" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2674" y="925"/>
+        </scene>
+        <!--Preview 1-->
+        <scene sceneID="Wpu-Zj-R2m">
+            <objects>
+                <collectionViewController storyboardIdentifier="TC_PREVIEW_VC_0" title="Preview 1" hidesBottomBarWhenPushed="YES" id="rFK-si-FmI" customClass="TCPreviewCollectionViewController" customModule="Toony_Cam" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9HX-4z-Dv2">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Rd7-Vb-ShG">
+                            <size key="itemSize" width="320" height="505"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" reuseIdentifier="TC_FILTERS_CELL_2" id="aDD-iA-ykw">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="505"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="505"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                                <color key="backgroundColor" red="0.77647058820000003" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="rFK-si-FmI" id="00p-KK-Gfu"/>
+                            <outlet property="delegate" destination="rFK-si-FmI" id="yoR-k5-avK"/>
+                        </connections>
+                    </collectionView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="mAm-WQ-r60">
+                        <leftBarButtonItems>
+                            <barButtonItem image="ic_arrow_back_white_36pt" id="JCA-el-BpL">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="popBack:" destination="rFK-si-FmI" id="DLA-MJ-3Dv"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="ic_help_white_36pt" id="acc-LB-f48">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <rightBarButtonItems>
+                            <barButtonItem image="ic_delete_white_36pt" id="pU3-44-v1d">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </barButtonItem>
+                            <barButtonItem image="ic_edit_white_36pt" id="9YL-tR-SCP">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U7S-Ph-LxU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2673.75" y="2661.9718309859154"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="SnI-mA-JgD">
+            <objects>
+                <tabBarController storyboardIdentifier="TC_FILTERS_TAB_VC" automaticallyAdjustsScrollViewInsets="NO" id="uv9-m8-ahy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="MTD-mj-8AQ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.77647058820000003" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="0.77647058820000003" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="UvL-Hw-ej6" kind="relationship" relationship="viewControllers" id="QQg-lp-aqa"/>
+                        <segue destination="U8A-gk-xxf" kind="relationship" relationship="viewControllers" id="P41-Zh-eXg"/>
+                        <segue destination="i0Y-Sl-xms" kind="relationship" relationship="viewControllers" id="crE-G9-i9U"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m7l-Bm-Yhi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4907" y="7"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="NMP-Hk-HGC">
+            <objects>
+                <collectionViewController storyboardIdentifier="TC_FILTERS_VC_1" title="Favorites" id="cL3-uB-GQq" customClass="TCFilterCollectionViewController" customModule="Toony_Cam" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="qUd-mE-ZxO">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="wb3-T9-9n5">
+                            <size key="itemSize" width="85" height="85"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="16" minY="16" maxX="16" maxY="16"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TC_FILTERS_CELL" id="aIp-Q6-miQ" customClass="TCFiltersCollectionViewCell" customModule="Toony_Cam" customModuleProvider="target">
+                                <rect key="frame" x="16" y="16" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1AB-J8-QNi">
+                                            <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="1AB-J8-QNi" secondAttribute="height" multiplier="1:1" id="lHb-I1-NAN"/>
+                                            </constraints>
+                                        </imageView>
+                                        <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLW-6M-fFP" customClass="TCAccLinkButton" customModule="Toony_Cam" customModuleProvider="target">
+                                            <rect key="frame" x="-3" y="-3" width="72" height="72"/>
+                                            <color key="backgroundColor" red="0.83529411760000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="ZLW-6M-fFP" secondAttribute="height" multiplier="1:1" id="2vm-QO-wVy"/>
+                                                <constraint firstAttribute="width" constant="72" id="MVt-wv-O0l"/>
+                                                <constraint firstAttribute="height" constant="72" id="bhb-eR-QoP"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <state key="normal" image="ic_share_white_36pt"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="tcRadius">
+                                                    <real key="value" value="36"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="tcShadowRadius">
+                                                    <real key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="tcShadowColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="tcShadowOpacity">
+                                                    <real key="value" value="0.40000000000000002"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="tcShadowOffset">
+                                                    <size key="value" width="0.0" height="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="shareAction:" destination="aIp-Q6-miQ" eventType="touchUpInside" id="0w9-w3-xrj"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.25295964339999999" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="1AB-J8-QNi" secondAttribute="trailing" constant="-8" id="5nb-Uo-2ww"/>
+                                    <constraint firstItem="1AB-J8-QNi" firstAttribute="top" secondItem="aIp-Q6-miQ" secondAttribute="topMargin" constant="-8" id="EdX-Ph-MAL"/>
+                                    <constraint firstItem="1AB-J8-QNi" firstAttribute="leading" secondItem="aIp-Q6-miQ" secondAttribute="leadingMargin" constant="-8" id="dgL-MO-ki3"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="ZLW-6M-fFP" secondAttribute="trailing" constant="8" id="hMD-aE-yHN"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="ZLW-6M-fFP" secondAttribute="bottom" constant="8" id="oki-Qh-uz8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="tcRadius">
+                                        <real key="value" value="8.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="imageCell" destination="1AB-J8-QNi" id="awT-jC-13U"/>
+                                    <outlet property="shareButton" destination="ZLW-6M-fFP" id="hmS-ap-f0H"/>
+                                    <segue destination="Fmd-hp-o6x" kind="show" identifier="FROM_CAM_TO_FILTERS" id="Z3P-vf-boK">
+                                        <segue key="commit" inheritsFrom="parent" id="T1l-Wj-tqY"/>
+                                        <segue key="preview" inheritsFrom="commit" id="VYX-FX-ksy"/>
+                                        <nil key="action"/>
+                                    </segue>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="cL3-uB-GQq" id="AMu-7S-eW3"/>
+                            <outlet property="delegate" destination="cL3-uB-GQq" id="Dxf-TO-HMt"/>
+                        </connections>
+                    </collectionView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="12g-jG-K1k">
+                        <leftBarButtonItems>
+                            <barButtonItem image="ic_close_white_36pt" id="0GD-da-J9q">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="vn7-yc-JPc" kind="unwind" unwindAction="unwindToCamWithSegue:" id="7yY-0P-eEn"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="ic_help_white_36pt" id="ALd-NK-Nm9">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="P9m-cM-Cof">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VgP-Ng-QxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="vn7-yc-JPc" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4907" y="1762"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="wvI-ds-OuM">
+            <objects>
+                <navigationController storyboardIdentifier="TC_FILTERS_NAV_VC_1" automaticallyAdjustsScrollViewInsets="NO" id="U8A-gk-xxf" customClass="TCFiltersNavigationController" customModule="Toony_Cam" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" title="Favorites" image="ic_favorite_white_36pt" id="bR7-Jx-bcr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="2me-JF-oa6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="EtO-PD-4Sc">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="cL3-uB-GQq" kind="relationship" relationship="rootViewController" id="bKx-dT-siC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DwP-Do-elg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4907" y="924"/>
+        </scene>
+        <!--Preview 2-->
+        <scene sceneID="4Ji-te-w48">
+            <objects>
+                <collectionViewController storyboardIdentifier="TC_PREVIEW_VC_1" title="Preview 2" hidesBottomBarWhenPushed="YES" id="Fmd-hp-o6x" customClass="TCPreviewCollectionViewController" customModule="Toony_Cam" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="hss-ja-ynF">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="8q2-zs-Hdv">
+                            <size key="itemSize" width="320" height="505"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" reuseIdentifier="TC_FILTERS_CELL_2" id="CPQ-ub-9nb">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="505"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="505"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Fmd-hp-o6x" id="faK-Fd-XQO"/>
+                            <outlet property="delegate" destination="Fmd-hp-o6x" id="XjD-s9-mCY"/>
+                        </connections>
+                    </collectionView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="KKT-OT-4U3">
+                        <leftBarButtonItems>
+                            <barButtonItem image="ic_arrow_back_white_36pt" id="Rhw-Jn-odE">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="popBack:" destination="Fmd-hp-o6x" id="bgG-7N-Nkl"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="ic_help_white_36pt" id="wId-xS-VRI">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <rightBarButtonItems>
+                            <barButtonItem image="ic_remove_circle_white_36pt" id="aHP-gH-NAP">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </barButtonItem>
+                            <barButtonItem image="ic_edit_white_36pt" id="U9Q-sO-IDp">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YfG-ay-ufo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4906.875" y="2661.9718309859154"/>
+        </scene>
+        <!--Shared-->
+        <scene sceneID="I2n-mT-lT2">
+            <objects>
+                <collectionViewController storyboardIdentifier="TC_FILTERS_VC_2" title="Shared" id="FQi-eK-GSL" customClass="TCFilterCollectionViewController" customModule="Toony_Cam" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ZdG-RD-TmB">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="Aao-Yr-T8c">
+                            <size key="itemSize" width="85" height="85"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="16" minY="16" maxX="16" maxY="16"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TC_FILTERS_CELL" id="jJU-ih-aI7" customClass="TCFiltersCollectionViewCell" customModule="Toony_Cam" customModuleProvider="target">
+                                <rect key="frame" x="16" y="16" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyy-dk-b4I" customClass="TCAccLinkButton" customModule="Toony_Cam" customModuleProvider="target">
+                                            <rect key="frame" x="-3" y="-3" width="72" height="72"/>
+                                            <color key="backgroundColor" red="0.83529411760000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="cyy-dk-b4I" secondAttribute="height" multiplier="1:1" id="aNR-eC-QeD"/>
+                                                <constraint firstAttribute="height" constant="72" id="kns-vO-Vqt"/>
+                                                <constraint firstAttribute="width" constant="72" id="vzI-o2-7Dc"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <state key="normal" image="ic_share_white_36pt"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="tcRadius">
+                                                    <real key="value" value="36"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="tcShadowRadius">
+                                                    <real key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="tcShadowColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="tcShadowOpacity">
+                                                    <real key="value" value="0.40000000000000002"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="tcShadowOffset">
+                                                    <size key="value" width="0.0" height="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="shareAction:" destination="jJU-ih-aI7" eventType="touchUpInside" id="mwC-59-O0H"/>
+                                            </connections>
+                                        </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MQ9-XZ-xRE">
+                                            <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="MQ9-XZ-xRE" secondAttribute="height" multiplier="1:1" id="hai-mU-tGk"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.25295964339999999" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="MQ9-XZ-xRE" secondAttribute="trailing" constant="-8" id="CNh-qi-tL1"/>
+                                    <constraint firstItem="MQ9-XZ-xRE" firstAttribute="leading" secondItem="jJU-ih-aI7" secondAttribute="leadingMargin" constant="-8" id="RXa-Uk-B3c"/>
+                                    <constraint firstItem="MQ9-XZ-xRE" firstAttribute="top" secondItem="jJU-ih-aI7" secondAttribute="topMargin" constant="-8" id="Wzd-Z9-gYE"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="cyy-dk-b4I" secondAttribute="trailing" constant="8" id="ZCp-ew-iQb"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="cyy-dk-b4I" secondAttribute="bottom" constant="8" id="bu2-wM-7Lq"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageCell" destination="MQ9-XZ-xRE" id="1eD-6B-bfJ"/>
+                                    <outlet property="shareButton" destination="cyy-dk-b4I" id="mJc-Gw-dzk"/>
+                                    <segue destination="LCC-Lt-bH7" kind="show" identifier="FROM_CAM_TO_FILTERS" id="pRd-h4-Qnt">
+                                        <segue key="commit" inheritsFrom="parent" id="6pH-ZW-vJH"/>
+                                        <segue key="preview" inheritsFrom="commit" id="Pw8-Ui-iPg"/>
+                                        <nil key="action"/>
+                                    </segue>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="FQi-eK-GSL" id="MET-3d-3Fy"/>
+                            <outlet property="delegate" destination="FQi-eK-GSL" id="8U1-kS-DVT"/>
+                        </connections>
+                    </collectionView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="nZr-aP-EDz">
+                        <leftBarButtonItems>
+                            <barButtonItem image="ic_close_white_36pt" id="uoG-Nm-NFv">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="UfB-KJ-jhk" kind="unwind" unwindAction="unwindToCamWithSegue:" id="Y6I-Gw-d7E"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="ic_help_white_36pt" id="Ff7-cL-1wY">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="rt4-9L-76p">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5xo-hA-wvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="UfB-KJ-jhk" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="7155" y="1762"/>
+        </scene>
+        <!--Shared-->
+        <scene sceneID="BZd-UJ-4BC">
+            <objects>
+                <navigationController storyboardIdentifier="TC_FILTERS_NAV_VC_2" automaticallyAdjustsScrollViewInsets="NO" id="i0Y-Sl-xms" customClass="TCFiltersNavigationController" customModule="Toony_Cam" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="2" title="Shared" image="ic_people_white_36pt" badgeValue="3" id="k5S-Da-sET"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="8j2-GV-Ft8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="U1Z-ad-5af">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="FQi-eK-GSL" kind="relationship" relationship="rootViewController" id="2vb-ZY-PiH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hOK-ch-ZM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7155" y="924"/>
+        </scene>
+        <!--Preview 3-->
+        <scene sceneID="H4e-dC-1nb">
+            <objects>
+                <collectionViewController storyboardIdentifier="TC_PREVIEW_VC_2" title="Preview 3" hidesBottomBarWhenPushed="YES" id="LCC-Lt-bH7" customClass="TCPreviewCollectionViewController" customModule="Toony_Cam" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="oYT-pM-p6q">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="RnY-ij-cKu">
+                            <size key="itemSize" width="320" height="505"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TC_FILTERS_CELL_2" id="PUc-mU-kXX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="505"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="505"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="LCC-Lt-bH7" id="DW1-uk-5y1"/>
+                            <outlet property="delegate" destination="LCC-Lt-bH7" id="YsN-Ez-JaS"/>
+                        </connections>
+                    </collectionView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="JTv-IX-Vc1">
+                        <leftBarButtonItems>
+                            <barButtonItem image="ic_arrow_back_white_36pt" id="4Y7-H7-xjj">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="popBack:" destination="LCC-Lt-bH7" id="OIy-0f-Bx4"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="ic_help_white_36pt" id="fF1-3O-1ve">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <rightBarButtonItems>
+                            <barButtonItem image="ic_remove_circle_white_36pt" id="bK0-Tc-HcC">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </barButtonItem>
+                            <barButtonItem image="ic_edit_white_36pt" id="jEC-Db-PJm">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cf0-O1-hOj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7155" y="2661.9718309859154"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_add_white_36pt" width="36" height="36"/>
+        <image name="ic_arrow_back_white_36pt" width="36" height="36"/>
+        <image name="ic_close_white_36pt" width="36" height="36"/>
+        <image name="ic_delete_white_36pt" width="36" height="36"/>
+        <image name="ic_edit_white_36pt" width="36" height="36"/>
+        <image name="ic_face_white_36pt" width="36" height="36"/>
+        <image name="ic_favorite_white_36pt" width="36" height="36"/>
+        <image name="ic_help_white_36pt" width="36" height="36"/>
+        <image name="ic_people_white_36pt" width="36" height="36"/>
+        <image name="ic_remove_circle_white_36pt" width="36" height="36"/>
+        <image name="ic_share_white_36pt" width="36" height="36"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Z3P-vf-boK"/>
+        <segue reference="4o6-tL-jy8"/>
+        <segue reference="pRd-h4-Qnt"/>
+    </inferredMetricsTieBreakers>
+</document>
