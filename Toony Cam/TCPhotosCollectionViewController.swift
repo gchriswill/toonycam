@@ -8,11 +8,16 @@
 
 import UIKit
 import Photos
+import FirebaseAuth
+import FirebaseDatabase
+import TwitterKit
 
 private let reuseIdentifier = "TC_PHOTOS_CELL"
 
 class TCPhotosCollectionViewController: UICollectionViewController {
 
+	var databaseRef: FIRDatabaseReference! = nil
+	
 	var items: [UIImage] = []
 	
 	var traveling = false
@@ -24,12 +29,73 @@ class TCPhotosCollectionViewController: UICollectionViewController {
 	var assetThumbnailSize:CGSize!
 	var collection: PHAssetCollection!
 	var assetCollectionPlaceholder: PHObjectPlaceholder!
+	var selfieSource:[String] = [] {
+		didSet{
+			
+			if items.count != selfieSource.count {
+				
+				for i in selfieSource.enumerated() {
+					
+					do {
+						
+						let iUrl = URL(string: i.element)
+						let idata = try Data(contentsOf: iUrl!)
+						print(i.offset)
+						items += [UIImage(data: idata)!]
+						self.collectionView!.reloadData()
+					}catch{
+						print(error.localizedDescription)
+					}
+				}
+			}
+		}
+	}
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+		
+		NotificationCenter.default.addObserver(self, selector: #selector(twShare), name: NSNotification.Name.init("SHARE"), object: nil)
+		
+		if let currentUser = FIRAuth.auth()?.currentUser {
+			// User is signed in.
+			databaseRef = FIRDatabase.database().reference()
+			var mainLocation = "selfies"
+			
+			if self.title == "Favorites" {
+					mainLocation = "favorites"
+			}
+			
+			databaseRef.child(mainLocation).child(currentUser.uid).observe(FIRDataEventType.value, with: { (snapshot) in
+				
+				if snapshot.exists() {
+
+					let values = snapshot.value as! Dictionary<String, String>
+					
+					var arr: [String] = []
+					
+					for i in values {
+						arr += [i.value]
+					}
+					self.selfieSource = arr
+				}
+			})
+			
+		} else {
+			
+			// No user is signed in.
+			let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
+			let alertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
+			
+			alert.addAction(alertAction)
+			
+			alert.title = "You need to be signed to access this screen"
+			alert.message = "Please sign in and return to this screen in order to access your fotos..."
+			self.present(alert, animated: true, completion: nil)
+			
+		}
+		
         //fatalError()
-		prepareAlbum()
+		//prepareAlbum()
 		//showImages()
         
         // Uncomment the following line to preserve selection between presentations
@@ -45,6 +111,12 @@ class TCPhotosCollectionViewController: UICollectionViewController {
         collectionView?.isScrollEnabled = true
         
     }
+	
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
+		
+		databaseRef.removeAllObservers()
+	}
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -103,7 +175,6 @@ class TCPhotosCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
                                                       for: indexPath) as! TCPhotosCollectionViewCell
 		
-		
 		cell.cellImage = items[indexPath.row]
         cell.isUserInteractionEnabled = true
         cell.shareButton.isHidden = true
@@ -112,6 +183,26 @@ class TCPhotosCollectionViewController: UICollectionViewController {
         return cell
         
     }
+	
+	func twShare(notification: Notification)-> Void{
+		// Swift
+		
+		let imahge = notification.object as! UIImage
+		let composer = TWTRComposer()
+		
+		composer.setText("Toony selfie from @toonycam")
+		composer.setImage(imahge)
+		
+		// Called from a UIViewController
+		composer.show(from: self) { result in
+			if (result == TWTRComposerResult.cancelled) {
+				print("Tweet composition cancelled")
+			}
+			else {
+				print("Sending tweet!")
+			}
+		}
+	}
 
     // MARK: UICollectionViewDelegate
 
@@ -144,84 +235,86 @@ class TCPhotosCollectionViewController: UICollectionViewController {
     }
     */
 	
-	func prepareAlbum() {
-		//Get PHFetch Options
-		
-		let fetchOptions = PHFetchOptions()
-		fetchOptions.predicate = NSPredicate(format: "title = %@", "Toony Cam")
-		let collection : PHFetchResult = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .any, options: fetchOptions)
-		//Check return value - If found, then get the first album out
-		if let _: AnyObject = collection.firstObject {
-			
-			self.albumFound = true
-			assetCollection = collection.firstObject! as PHAssetCollection
-			
-			self.showImages()
-			
-		} else {
-			
-			//If not found - Then create a new album
-			PHPhotoLibrary.shared().performChanges({
-				let createAlbumRequest : PHAssetCollectionChangeRequest = PHAssetCollectionChangeRequest.creationRequestForAssetCollection(withTitle: "Toony Cam")
-				
-				self.assetCollectionPlaceholder = createAlbumRequest.placeholderForCreatedAssetCollection
-			}, completionHandler: { success, error in
-				self.albumFound = success
-				
-				if (success) {
-					let collectionFetchResult = PHAssetCollection.fetchAssetCollections(withLocalIdentifiers: [self.assetCollectionPlaceholder.localIdentifier], options: nil)
-					
-					print(collectionFetchResult.count)
-					self.assetCollection = collectionFetchResult.firstObject! as PHAssetCollection
-					
-					self.showImages()
-					
-				}
-			})
-		}
-	}
+//	func prepareAlbum() {
+//		//Get PHFetch Options
+//		
+//		let fetchOptions = PHFetchOptions()
+//		fetchOptions.predicate = NSPredicate(format: "title = %@", "Toony Cam")
+//		let collection : PHFetchResult = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .any, options: fetchOptions)
+//		//Check return value - If found, then get the first album out
+//		if let _: AnyObject = collection.firstObject {
+//			
+//			self.albumFound = true
+//			assetCollection = collection.firstObject! as PHAssetCollection
+//			
+//			self.showImages()
+//			
+//		} else {
+//			
+//			//If not found - Then create a new album
+//			PHPhotoLibrary.shared().performChanges({
+//				let createAlbumRequest : PHAssetCollectionChangeRequest = PHAssetCollectionChangeRequest.creationRequestForAssetCollection(withTitle: "Toony Cam")
+//				
+//				self.assetCollectionPlaceholder = createAlbumRequest.placeholderForCreatedAssetCollection
+//			}, completionHandler: { success, error in
+//				self.albumFound = success
+//				
+//				if (success) {
+//					let collectionFetchResult = PHAssetCollection.fetchAssetCollections(withLocalIdentifiers: [self.assetCollectionPlaceholder.localIdentifier], options: nil)
+//					
+//					print(collectionFetchResult.count)
+//					self.assetCollection = collectionFetchResult.firstObject! as PHAssetCollection
+//					
+//					self.showImages()
+//					
+//				}
+//			})
+//		}
+//	}
 	
 	func showImages() {
 		//This will fetch all the assets in the collection
 		
-		let assets : PHFetchResult = PHAsset.fetchAssets(in: self.assetCollection, options: nil)
-		print("Show Images Assets \(assets.count)")
 		
-		let imageManager = PHCachingImageManager()
-		//Enumerating objects to get a chached image - This is to save loading time
-		assets.enumerateObjects({(object: AnyObject!,
-			count: Int,
-			stop: UnsafeMutablePointer<ObjCBool>) in
-			
-			if object is PHAsset {
-				
-				let asset = object as! PHAsset
-				
-				print("Show assets type \(asset.mediaType)")
-				
-				let imageSize = CGSize(width: asset.pixelWidth, height: asset.pixelHeight)
-				
-				let options = PHImageRequestOptions()
-				options.deliveryMode = PHImageRequestOptionsDeliveryMode.highQualityFormat
-				options.isSynchronous = true
-				
-				imageManager.requestImage(for: asset,
-				                          targetSize: imageSize,
-				                          contentMode: PHImageContentMode.aspectFill,
-				                          options: options,
-				                          resultHandler: { (requestedImage, dictionary) in
-											
-											print(dictionary!)
-//											print(requestedImage)
-											
-											if let img = requestedImage {
-												self.items += [img]
-												self.collectionView!.reloadData()
-											}
-				})
-
-			}
-		})
+		
+//		let assets : PHFetchResult = PHAsset.fetchAssets(in: self.assetCollection, options: nil)
+//		print("Show Images Assets \(assets.count)")
+//		
+//		let imageManager = PHCachingImageManager()
+//		//Enumerating objects to get a chached image - This is to save loading time
+//		assets.enumerateObjects({(object: AnyObject!,
+//			count: Int,
+//			stop: UnsafeMutablePointer<ObjCBool>) in
+//			
+//			if object is PHAsset {
+//				
+//				let asset = object as! PHAsset
+//				
+//				print("Show assets type \(asset.mediaType)")
+//				
+//				let imageSize = CGSize(width: asset.pixelWidth, height: asset.pixelHeight)
+//				
+//				let options = PHImageRequestOptions()
+//				options.deliveryMode = PHImageRequestOptionsDeliveryMode.highQualityFormat
+//				options.isSynchronous = true
+//				
+//				imageManager.requestImage(for: asset,
+//				                          targetSize: imageSize,
+//				                          contentMode: PHImageContentMode.aspectFill,
+//				                          options: options,
+//				                          resultHandler: { (requestedImage, dictionary) in
+//											
+//											print(dictionary!)
+////											print(requestedImage)
+//											
+//											if let img = requestedImage {
+//												self.items += [img]
+//												self.collectionView!.reloadData()
+//											}
+//				})
+//
+//			}
+//		})
 	}
 
 }

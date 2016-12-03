@@ -131,6 +131,14 @@ class TCAccountViewController: UIViewController {
 		
 	}
 	
+	@IBAction func editAction(_ sender: UIButton) {
+		
+		
+		
+		
+	}
+	
+	
     /*
     // MARK: - Navigation
 

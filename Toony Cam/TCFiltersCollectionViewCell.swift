@@ -13,6 +13,7 @@ class TCFiltersCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var imageCell: UIImageView!
     @IBOutlet var shareButton: UIButton!
+	
     
     @IBInspectable var tcRadius:CGFloat = 0 {
         didSet{

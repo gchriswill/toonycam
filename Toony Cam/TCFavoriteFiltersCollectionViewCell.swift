@@ -11,6 +11,6 @@ import UIKit
 class TCFavoriteFiltersCollectionViewCell: UICollectionViewCell {
 	
 	@IBOutlet weak var imageCell: UIImageView!
-	
+	var cellIndexPath: IndexPath? = nil
     
 }

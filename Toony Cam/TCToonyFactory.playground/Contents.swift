@@ -274,9 +274,28 @@ import UIKit
 
 //var myView = TCActivityIndicator(frame:CGRect(x: 0, y: 0, width: 200, height: 200) )
 
+//let date =
+//
+//var formatter = DateFormatter()
+//formatter.dateFormat = "yyyy-MM-dd_HH-mm"
+//formatter.string(from: Date() )
+//
+//formatter.date(from: String(describing: date) )
+//
 
-let data = try Data(contentsOf: URL(string: "http://pbs.twimg.com/profile_images/693702786131857408/_HGwqa7c_normal.jpg")!)
+//let formatter = DateFormatter()
+//formatter.dateFormat = "YYYY-MM-dd_HH-mm-ss"
+//let date = formatter.string(from: Date() )
 
-let aImage = UIImage(data: data)
+//let formatter = DateFormatter()
+//
+
+//let someDateTime = formatter.date(from: date.timeIntervalSinceNow)
+//
+//print(someDateTime)
+
+//let data = try Data(contentsOf: URL(string: "http://pbs.twimg.com/profile_images/693702786131857408/_HGwqa7c_normal.jpg")!)
+//
+//let aImage = UIImage(data: data)
 
 

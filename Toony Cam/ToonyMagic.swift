@@ -74,20 +74,22 @@ extension TCCameraViewController: AVCaptureMetadataOutputObjectsDelegate, AVCapt
         
         // Preparing the AV's camera feed's preview layer
         previewLayer = AVCaptureVideoPreviewLayer(session: session)
+		
         previewLayer.frame = view.frame
         previewLayer.zPosition = -100
         previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
         previewLayer.connection.videoOrientation = AVCaptureVideoOrientation.portrait
         
-        previewLayer.frame.origin = CGPoint(x: 0, y: 0)
-        
+//        previewLayer.frame.origin = CGPoint(x: 0, y: 0)
+		
         view.layer.addSublayer(previewLayer)
         
         // Preparing the filter's Host layer
-        hostCALayer = CALayer()
+        //hostCALayer = CALayer()
         hostCALayer.zPosition = 1
         hostCALayer.frame = previewLayer.frame
-        
+//		hostCALayer.backgroundColor = #colorLiteral(red: 0.868450582, green: 0.3705046773, blue: 0.2716209292, alpha: 0.5).cgColor
+//        hostCALayer.mask = faceCALayer
         //  \\ hostCALayer.borderColor = UIColor.red.cgColor
         // \\  hostCALayer.borderWidth = 3.0
         //hostCALayer.contents = UIImage(named: "dog_filter_p2")?.cgImage
@@ -95,16 +97,16 @@ extension TCCameraViewController: AVCaptureMetadataOutputObjectsDelegate, AVCapt
         
         previewLayer.addSublayer(hostCALayer)
         
-        for i in 0...2 {
+        //for i in 0...2 {
             
-            let faceCALayer = CALayer()
+            //faceCALayer = CALayer()
             faceCALayer.zPosition = 2
             faceCALayer.isHidden = true
-            faceCALayer.contents = UIImage(named: "filter_\(i)")?.cgImage
+            //faceCALayer.contents = UIImage(named: "filter_\(i)")?.cgImage
             faceCALayer.contentsGravity = kCAGravityResize
             self.hostCALayer.addSublayer(faceCALayer)
             
-		}
+		//}
 		
     }
 	    
@@ -208,44 +210,44 @@ extension TCCameraViewController: AVCaptureMetadataOutputObjectsDelegate, AVCapt
 
         for face in faces.enumerated() {
             
-            if let faceLayer = self.hostCALayer.sublayers?[face.offset] {
+            //if let faceLayer = self.hostCALayer.sublayers?[face.offset] {
                 
                 let faceBounds = self.previewLayer.transformedMetadataObject(for: face.element).bounds
                 
                  DispatchQueue.main.async() {
                     
-                    faceLayer.name = "\(face.element.faceID)"
-                    faceLayer.frame = faceBounds
-                    faceLayer.isHidden = false
+                    self.faceCALayer.name = "\(face.element.faceID)"
+                    self.faceCALayer.frame = faceBounds
+                    self.faceCALayer.isHidden = false
                     //faceLayer.backgroundColor = UIColor.green.cgColor
                     //faceLayer.opacity = 0.5
                     
-                    faceLayer.removeAllAnimations()
+                    self.faceCALayer.removeAllAnimations()
                     
-                    let cSize = faceLayer.frame.size
-                    let cO = faceLayer.frame.origin
+                    let cSize = self.faceCALayer.frame.size
+                    let cO = self.faceCALayer.frame.origin
                     
-                    faceLayer.frame.size = CGSize( width: (cSize.width * 1.5), height: (cSize.height * 1.5) )
+                    self.faceCALayer.frame.size = CGSize( width: (cSize.width * 1.5), height: (cSize.height * 1.5) )
                     let cameraInput = self.session.inputs.first as! AVCaptureDeviceInput
                     
                     if cameraInput.device.position == .front {
                         
-                        faceLayer.frame.origin = CGPoint(x: cO.x - (cSize.width * 0.25),y: cO.y + (cSize.height / 5) )
+                        self.faceCALayer.frame.origin = CGPoint(x: cO.x - (cSize.width * 0.25),y: cO.y - (cSize.height / 2) )
                         
                     }else{
                         
-                        faceLayer.frame.origin = CGPoint(x: cO.x - (cSize.width * 0.25),y: cO.y + (cSize.height / 2.5) )
+                        self.faceCALayer.frame.origin = CGPoint(x: cO.x - (cSize.width * 0.25),y: cO.y - (cSize.height / 2.5) )
                         
                     }
                 }
-            }
+            //}
 			
         //TODO: Need fix for bug with rotation
         //self.faceLayer.transform = CATransform3DMakeRotation(CGFloat(rawFace.rollAngle * CGFloat(M_PI / 180) ), 0.0, 0.0, 0.0)
         }
     }
 
-	func magicRenderer(data:Data) -> UIImage {
+	func magicRenderer(data:Data, completionBlock: (_ toonyImage: UIImage)->Void ) -> Void {
 		
 		var uiImage = UIImage()
 		var imageData = Data()
@@ -296,7 +298,7 @@ extension TCCameraViewController: AVCaptureMetadataOutputObjectsDelegate, AVCapt
 			break;
 		}
 		
-		print(exifOrientation)
+		//print(exifOrientation)
 		
 		let objects = ciDetector!.features(in: ciImageCore!, options: [CIDetectorImageOrientation : exifOrientation])
 		
@@ -311,31 +313,32 @@ extension TCCameraViewController: AVCaptureMetadataOutputObjectsDelegate, AVCapt
 		for faceObj in faces.enumerated(){
 			
 			let face = faceObj.element
-			var index = faceObj.offset
-			
 			
 			let layer = CALayer()
 			
 			layer.bounds = face.bounds
-			layer.contents = UIImage(named: "filter_0")?.cgImage
+			layer.contents = currentFilter?.cgImage
+			layer.contentsGravity = kCAGravityResizeAspectFill
 
-			layer.bounds.origin = CGPoint(x: face.bounds.origin.y, y: face.bounds.origin.x)
+			//layer.bounds.size = CGSize(width: face.bounds.size.width * 1.5, height: face.bounds.size.height * 1.5)
 			
-				UIGraphicsBeginImageContext(uiImage.size)
+			layer.bounds.origin = CGPoint(x: face.bounds.origin.y, y: face.bounds.origin.x * 0.8)
 			
-				uiImage.draw(in: CGRect(x: 0, y: 0, width: uiImage.size.width, height: uiImage.size.height))
-				
-				let context = UIGraphicsGetCurrentContext()
-				//CGContextTranslateCTM(context, self.uiImage.size.height, self.uiImage.size.width)
-				
-				layer.render(in: context!)
-				
-				newMemeImage = UIGraphicsGetImageFromCurrentImageContext()!
-				
-				UIGraphicsEndImageContext()
+			UIGraphicsBeginImageContext(uiImage.size)
+		
+			uiImage.draw(in: CGRect(x: 0, y: 0, width: uiImage.size.width, height: uiImage.size.height))
+			
+			let context = UIGraphicsGetCurrentContext()
+			
+			layer.render(in: context!)
+			
+			newMemeImage = UIGraphicsGetImageFromCurrentImageContext()!
+			
+			UIGraphicsEndImageContext()
 			
 		}
 		
-		return newMemeImage
+		completionBlock(newMemeImage)
+		
 	}
 }

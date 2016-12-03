@@ -9,8 +9,8 @@
 //Firebase ROOT database location: https://toony-cam.firebaseio.com/
 
 import UIKit
-//import FirebaseDatabase
-//import FirebaseAuth
+import FirebaseDatabase
+import FirebaseAuth
 
 import AVFoundation
 import ImageIO
@@ -20,12 +20,43 @@ import AssetsLibrary
 
 class TCCameraViewController: UIViewController {
 	
-    var ref: FIRDatabaseReference!
+    var dbRef: FIRDatabaseReference!
+	var storageRef: FIRStorageReference!
     var canTakeShot = false
     var canTravel = false
     var isUiEnabled = false
     var isFirstLaunch = true
 	
+	var filterSource: Array<String> = [] {
+		didSet{
+			
+			if filterImages.count != filterSource.count {
+				
+				for i in filterSource.enumerated() {
+					
+					do {
+						
+						//self.filterCollectionView.deleteItems(at: self.filterCollectionView.visibleCells)
+						
+						let iUrl = URL(string: i.element)
+						let idata = try Data(contentsOf: iUrl!)
+						print(i.offset)
+						
+						filterImages += [UIImage(data: idata)!]
+						
+						self.filterCollectionView.reloadData()
+						
+						
+					}catch{
+						print(error.localizedDescription)
+					}
+				}
+			}
+		}
+	}
+	var filterImages: Array<UIImage> = []
+	var currentFilter:UIImage? = nil
+	var currentIndexPath: IndexPath? = nil
 	
 	var cachedImage: UIImage!
 	var assetCollection: PHAssetCollection!
@@ -42,7 +73,8 @@ class TCCameraViewController: UIViewController {
     var previewLayer: AVCaptureVideoPreviewLayer!
     
     // The layer of for one face filter
-    var hostCALayer: CALayer!
+    var hostCALayer = CALayer()
+	var faceCALayer = CALayer()
     
     // The session queue
     var sessionQueue: DispatchQueue = DispatchQueue(label: "videoQueue", attributes: [])
@@ -61,22 +93,36 @@ class TCCameraViewController: UIViewController {
     /// -------------^
     
     @IBOutlet weak var camControlPanel: TCCamControlPanel!
+	@IBOutlet weak var filterCollectionView: UICollectionView!
 	
 	
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		dbRef = FIRDatabase.database().reference()
+		dbRef.child("filters").observe(FIRDataEventType.value, with: { (snapshot) in
+			
+			print(snapshot)
+			
+			if snapshot.exists() {
+				self.filterSource = snapshot.value as! Array<String>
+			}
+			
+		})
 		
 		// Firebase'a root database object's location...
-		if let _ = FIRAuth.auth()?.currentUser {
+		if let currentUser = FIRAuth.auth()?.currentUser {
 			// User is signed in.
-			ref = FIRDatabase.database().reference()
+			
+			storageRef = FIRStorage.storage().reference()
 			
 		} else {
 			// No user is signed in.
 			performSegue(withIdentifier: "FROM_CAM_TO_AUTH", sender: nil)
 			
 		}
+		
+		
 		
 		self.magicSetup()
 		
@@ -237,15 +283,27 @@ class TCCameraViewController: UIViewController {
     
     /*
     // MARK: - Navigation
-
+	*/
+	
     // In a storyboard-based application, you will often want to do a little preparation
     // before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
-    */
+		if segue.identifier == "FROM_CAM_TO_PREVIEW" {
+			
+			let nc = segue.destination as! UINavigationController
+			let vc = nc.viewControllers.first as! TCPreviewImageViewController
 
+			vc.cachedImage = cachedImage
+			
+		}
+    }
+
+
+	
+	
+	
 }
 
 extension TCCameraViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -255,24 +313,52 @@ extension TCCameraViewController: UICollectionViewDataSource, UICollectionViewDe
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return 10
+		return filterImages.count
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "favCell", for: indexPath) as! TCFavoriteFiltersCollectionViewCell
-		cell.imageCell.image = #imageLiteral(resourceName: "filter_1")
-		cell.backgroundColor = UIColor.white
-		cell.layer.cornerRadius = 25
+		cell.imageCell.image = filterImages[indexPath.item]
+		cell.cellIndexPath = indexPath
+		cell.layer.cornerRadius = 30
 		
 		return cell
 		
 	}
 	
-	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+	func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
 		
+		let tcCell = cell as! TCFavoriteFiltersCollectionViewCell
+		if currentIndexPath?.item != indexPath.item {
+			tcCell.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.5)
+		}
 	}
 	
+	
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		
+		currentIndexPath = indexPath
+		
+		DispatchQueue.main.async() {
+			
+			let _ = collectionView.visibleCells.map { (cell) -> UICollectionViewCell in
+				
+				let tcCell = cell as! TCFavoriteFiltersCollectionViewCell
+				tcCell.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.5)
+				return tcCell
+			}
+			//
+			
+			let cCell = collectionView.cellForItem(at: indexPath) as! TCFavoriteFiltersCollectionViewCell
+			self.currentFilter = self.filterImages[indexPath.item]
+			self.faceCALayer.contents = self.currentFilter?.cgImage
+			//collectionView.reloadItems(at: [indexPath])
+			
+			cCell.backgroundColor = #colorLiteral(red: 0.868450582, green: 0.3705046773, blue: 0.2716209292, alpha: 0.5)
+			
+		}
+	}
 }
 
 extension TCCameraViewController: TCCamControlPanelDelegate {
@@ -317,7 +403,7 @@ extension TCCameraViewController: TCCamControlPanelDelegate {
 	
 	func takeShot(){
 		
-		if session.isRunning{
+		if session.isRunning {
 			
 			sessionConnection = stillImageOutput.connection(withMediaType: AVMediaTypeVideo)
 			sessionConnection.videoOrientation = AVCaptureVideoOrientation(rawValue: UIDevice.current.orientation.rawValue)!
@@ -326,11 +412,25 @@ extension TCCameraViewController: TCCamControlPanelDelegate {
 				//let imagebuff = CMGetAttachment(sample,  kCGImagePropertyExifDictionary, nil) as! CFDictionaryRef
 				let imageShot = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sample) as Data
 				
-				let renderedimage = self.magicRenderer(data: imageShot)
+				self.magicRenderer(data: imageShot) { (toonyImage) in
+					
+					if let currentUser = FIRAuth.auth()?.currentUser {
+						
+						print("takeShot func on magic renderer call")
+						debugPrint(currentUser)
+						debugPrint(toonyImage)
+						self.cachedImage = toonyImage
+						
+						self.performSegue(withIdentifier: "FROM_CAM_TO_PREVIEW", sender: nil)
+						
+					}
+				}
 				
-				let imageData = UIImageJPEGRepresentation(renderedimage, 0.6)!
-				self.cachedImage = UIImage(data: imageData)!
-				self.prepareAlbum()
+//				let imageData = UIImageJPEGRepresentation(renderedimage, 0.6)!
+//				self.cachedImage = UIImage(data: imageData)!
+				
+				
+				//self.prepareAlbum()
 				
 				
 				//UIImageWriteToSavedPhotosAlbum(UIImage(data: imageData)!, nil, nil, nil)
@@ -345,6 +445,8 @@ extension TCCameraViewController: TCCamControlPanelDelegate {
 	
 	func prepareAlbum() {
 		//Get PHFetch Options
+		
+		
 		
 //		let fetchOptions = PHFetchOptions()
 //		fetchOptions.predicate = NSPredicate(format: "title = %@", "Toony Cam")
@@ -387,6 +489,8 @@ extension TCCameraViewController: TCCamControlPanelDelegate {
 	
 	func saveImage(){
 		
+		
+		storageRef.child("selfies").child("")
 //		func addAsset(image: UIImage, to album: PHAssetCollection) {
 //			
 //			PHPhotoLibrary.shared().performChanges({

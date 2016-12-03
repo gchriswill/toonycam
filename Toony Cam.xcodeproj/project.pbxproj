@@ -59,6 +59,7 @@
 		D9EFEC581DCFEFCC0006D0EF /* TCFiltersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EFEC571DCFEFCC0006D0EF /* TCFiltersCollectionViewCell.swift */; };
 		D9EFEC5B1DD025480006D0EF /* Filters.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9EFEC591DD025480006D0EF /* Filters.storyboard */; };
 		D9EFEC5D1DD026990006D0EF /* TCPreviewCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EFEC5C1DD026990006D0EF /* TCPreviewCollectionViewController.swift */; };
+		D9F566D91DF0999000A4592B /* TCPreviewImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F566D81DF0999000A4592B /* TCPreviewImageViewController.swift */; };
 		D9FE706C1DCF0E7C00246525 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9FE706A1DCF0E7C00246525 /* Account.storyboard */; };
 		D9FE706E1DCF24CB00246525 /* TCAccLinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FE706D1DCF24CB00246525 /* TCAccLinkButton.swift */; };
 		D9FE70711DCF455F00246525 /* TCFiltersNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FE70701DCF455F00246525 /* TCFiltersNavigationController.swift */; };
@@ -146,6 +147,7 @@
 		D9EFEC571DCFEFCC0006D0EF /* TCFiltersCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCFiltersCollectionViewCell.swift; sourceTree = "<group>"; };
 		D9EFEC5A1DD025480006D0EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Filters.storyboard; sourceTree = "<group>"; };
 		D9EFEC5C1DD026990006D0EF /* TCPreviewCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCPreviewCollectionViewController.swift; sourceTree = "<group>"; };
+		D9F566D81DF0999000A4592B /* TCPreviewImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCPreviewImageViewController.swift; sourceTree = "<group>"; };
 		D9FE706B1DCF0E7C00246525 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Account.storyboard; sourceTree = "<group>"; };
 		D9FE706D1DCF24CB00246525 /* TCAccLinkButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCAccLinkButton.swift; sourceTree = "<group>"; };
 		D9FE70701DCF455F00246525 /* TCFiltersNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCFiltersNavigationController.swift; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				D956A80D1DD24DCF00715E89 /* Control */,
+				D9F566D81DF0999000A4592B /* TCPreviewImageViewController.swift */,
 				D9CA8F621DEDE32B003D0F16 /* TCFavoriteFiltersCollectionViewCell.swift */,
 				D94B49901DBE77D50035335B /* TCCameraViewController.swift */,
 				D972DF3E1DC6931A00B92FB1 /* TCCamButton.swift */,
@@ -552,6 +555,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9F566D91DF0999000A4592B /* TCPreviewImageViewController.swift in Sources */,
 				D96A3DE61DC9F81A00FDD2BD /* TCAuthPanel.swift in Sources */,
 				D956A81A1DD273B100715E89 /* TCPreviewPhotoCollectionViewController.swift in Sources */,
 				D956A8181DD2735D00715E89 /* TCPhotosCollectionViewCell.swift in Sources */,

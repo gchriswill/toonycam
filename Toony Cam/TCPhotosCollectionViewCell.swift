@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import TwitterKit
+
 
 class TCPhotosCollectionViewCell: UICollectionViewCell {
     
@@ -42,7 +44,10 @@ class TCPhotosCollectionViewCell: UICollectionViewCell {
     
     // TODO: Implement share action
     @IBAction func shareAction(_ sender: UIButton) {
-        
+		// Swift
+		
+		NotificationCenter.default.post(name: NSNotification.Name.init("SHARE"), object: imageCell.image, userInfo: nil)
+		
     }
     
 }
