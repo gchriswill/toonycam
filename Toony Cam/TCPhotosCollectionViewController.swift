@@ -34,17 +34,24 @@ class TCPhotosCollectionViewController: UICollectionViewController {
 			
 			if items.count != selfieSource.count {
 				
+				items.removeAll()
+				
 				for i in selfieSource.enumerated() {
 					
-					do {
-						
-						let iUrl = URL(string: i.element)
-						let idata = try Data(contentsOf: iUrl!)
-						print(i.offset)
-						items += [UIImage(data: idata)!]
-						self.collectionView!.reloadData()
-					}catch{
-						print(error.localizedDescription)
+					DispatchQueue.global().async {
+						do {
+							
+							let iUrl = URL(string: i.element)
+							let idata = try Data(contentsOf: iUrl!)
+							print(i.offset)
+							self.items += [UIImage(data: idata)!]
+							
+							DispatchQueue.main.async {
+								self.collectionView?.reloadData()
+							}
+						}catch{
+							print(error.localizedDescription)
+						}
 					}
 				}
 			}
@@ -83,8 +90,13 @@ class TCPhotosCollectionViewController: UICollectionViewController {
 		} else {
 			
 			// No user is signed in.
+			
+			let alertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default) { (action) in
+				self.dismiss(animated: true, completion: nil)
+			}
+			
 			let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
-			let alertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
+			
 			
 			alert.addAction(alertAction)
 			
@@ -115,7 +127,10 @@ class TCPhotosCollectionViewController: UICollectionViewController {
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
 		
-		databaseRef.removeAllObservers()
+		if FIRAuth.auth()?.currentUser != nil {
+			databaseRef.removeAllObservers()
+		}
+		
 	}
     
     override func didReceiveMemoryWarning() {
@@ -152,16 +167,13 @@ class TCPhotosCollectionViewController: UICollectionViewController {
 			traveling = false
 		}
     }
-    
-    
+	
     // MARK: UICollectionViewDataSource
-    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-    
-    
+	
     override func collectionView(_ collectionView: UICollectionView,
                                  numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items

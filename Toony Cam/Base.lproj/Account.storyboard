@@ -30,7 +30,7 @@
                                     <constraint firstAttribute="width" secondItem="5p5-KW-gt3" secondAttribute="height" multiplier="1:1" id="k9H-rT-3xs"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="johndoe@example.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1aq-Zx-0Yj">
+                            <label opaque="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="johndoe@example.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" enabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aq-Zx-0Yj">
                                 <rect key="frame" x="60" y="359.5" width="256" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="256" id="XNr-hr-1Rl"/>
@@ -76,7 +76,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="twitter" returnKeyType="done"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="6" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_account_circle_white_36pt" translatesAutoresizingMaskIntoConstraints="NO" id="V0Z-nv-fej">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="6" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_account_circle_white_36pt" translatesAutoresizingMaskIntoConstraints="NO" id="V0Z-nv-fej">
                                 <rect key="frame" x="137.5" y="137.5" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
@@ -171,9 +171,6 @@
                         <rightBarButtonItems>
                             <barButtonItem tag="5" image="ic_delete_white_36pt" id="GfZ-r2-tF3">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <action selector="settingsAction:" destination="LBC-Q4-Zgx" id="0ex-m3-Wxp"/>
-                                </connections>
                             </barButtonItem>
                             <barButtonItem tag="4" image="ic_exit_to_app_white_36pt" id="WNq-ZO-zmw">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -186,6 +183,7 @@
                     <connections>
                         <outlet property="accountSocialButton" destination="LIy-Qm-VIv" id="Geq-fM-OA5"/>
                         <outlet property="accountSocialStatus" destination="UWD-zL-LuT" id="beK-gq-mNP"/>
+                        <outlet property="editingButton" destination="4kk-YV-1Vx" id="YvE-VY-3vW"/>
                         <outlet property="email" destination="1aq-Zx-0Yj" id="Jtf-Yl-8os"/>
                         <outlet property="profileImage" destination="V0Z-nv-fej" id="y0f-xa-2UK"/>
                         <outlet property="username" destination="txy-O1-0Rd" id="axQ-QL-5KF"/>

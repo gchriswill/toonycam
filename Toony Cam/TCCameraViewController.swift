@@ -15,7 +15,6 @@ import FirebaseAuth
 import AVFoundation
 import ImageIO
 import Photos
-
 import AssetsLibrary
 
 class TCCameraViewController: UIViewController {
@@ -32,28 +31,48 @@ class TCCameraViewController: UIViewController {
 			
 			if filterImages.count != filterSource.count {
 				
+				filterImages.removeAll()
+				self.filterCollectionView.isScrollEnabled = false
+				self.filterCollectionView.isUserInteractionEnabled = false
+				
+				var e = 0
 				for i in filterSource.enumerated() {
 					
-					do {
-						
-						//self.filterCollectionView.deleteItems(at: self.filterCollectionView.visibleCells)
-						
-						let iUrl = URL(string: i.element)
-						let idata = try Data(contentsOf: iUrl!)
-						print(i.offset)
-						
-						filterImages += [UIImage(data: idata)!]
-						
-						self.filterCollectionView.reloadData()
-						
-						
-					}catch{
-						print(error.localizedDescription)
+					DispatchQueue.global().async {
+					
+						do {
+							
+							//self.filterCollectionView.deleteItems(at: self.filterCollectionView.visibleCells)
+							
+							let iUrl = URL(string: i.element)
+							let idata = try Data(contentsOf: iUrl!)
+							print(i.offset)
+							
+							self.filterImages += [UIImage(data: idata)!]
+							
+							DispatchQueue.main.async {
+								self.filterCollectionView.reloadData()
+								
+								
+								if e == self.filterSource.endIndex - 1 {
+								
+									self.filterCollectionView.isScrollEnabled = true
+									self.filterCollectionView.isUserInteractionEnabled = true
+								}
+								
+								e += 1
+							}
+							
+							
+						}catch{
+							print(error.localizedDescription)
+						}
 					}
 				}
 			}
 		}
 	}
+	
 	var filterImages: Array<UIImage> = []
 	var currentFilter:UIImage? = nil
 	var currentIndexPath: IndexPath? = nil

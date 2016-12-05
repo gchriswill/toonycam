@@ -62,6 +62,8 @@ class TCAccountViewController: UIViewController {
 	@IBOutlet weak var accountSocialStatus: UILabel!
 	@IBOutlet weak var accountSocialButton: TCAccLinkButton!
 
+	@IBOutlet weak var editingButton: TCAccLinkButton!
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
@@ -133,11 +135,67 @@ class TCAccountViewController: UIViewController {
 	
 	@IBAction func editAction(_ sender: UIButton) {
 		
+		let actionHandler:(_ action:UIAlertAction)-> Void = { (action)->Void in
+			
+		}
 		
+		let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
+		let alertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: actionHandler)
+		alert.addAction(alertAction)
 		
+		let cUsr = FIRAuth.auth()?.currentUser
+		let pId = cUsr?.providerData.first?.providerID
 		
+		if (pId != AccountProvider.firebase.rawValue) {
+			return
+		}
+		
+		if (sender.tag == 0){
+			self.editingButton.setImage(#imageLiteral(resourceName: "ic_done_white_36pt"), for: .normal)
+			self.username.isSelected = true
+			self.username.isEnabled = true
+			sender.tag = 1
+			return
+		}
+		
+		let a1 = username.text == nil
+		let a2 = username.text == ""
+		
+		if a1 || a2 {
+			alert.title =  "Error while updating user's created profile..."
+			alert.message = "Username field can't be empty"
+			self.present(alert, animated: true) { () -> Void in
+			}
+			return
+		}
+		
+		let changeRequest = cUsr?.profileChangeRequest()
+		
+		changeRequest!.displayName = username.text!
+		changeRequest!.commitChanges { error2 in
+			
+			if let err2 = error2 {
+				
+				// An error happened.
+				alert.title =  "Error while updating user's created profile..."
+				alert.message = err2.localizedDescription
+				
+				self.present(alert, animated: true)
+				
+				return
+			}
+			
+			self.editingButton.setImage(#imageLiteral(resourceName: "ic_edit_white_36pt"), for: .normal)
+			self.username.isEnabled = true
+			sender.tag = 0
+			self.view.endEditing(true)
+			return
+		}
 	}
 	
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		self.view.endEditing(true)
+	}
 	
     /*
     // MARK: - Navigation

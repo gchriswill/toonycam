@@ -39,7 +39,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
                                         </imageView>
                                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5A-8O-awD">
-                                            <rect key="frame" x="-3" y="-3" width="72" height="72"/>
+                                            <rect key="frame" x="-40" y="-40" width="72" height="72"/>
                                             <color key="backgroundColor" red="0.83529411760000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="72" id="2Xx-8z-DVd"/>
@@ -62,9 +62,9 @@
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.25295964339999999" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="bottomMargin" secondItem="B5A-8O-awD" secondAttribute="bottom" constant="8" id="49g-4j-9RS"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="B5A-8O-awD" secondAttribute="bottom" constant="45" id="49g-4j-9RS"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="aal-Hn-NUf" secondAttribute="bottom" constant="-8" id="BBj-cc-Lug"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="B5A-8O-awD" secondAttribute="trailing" constant="8" id="Otz-a8-W50"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="B5A-8O-awD" secondAttribute="trailing" constant="45" id="Otz-a8-W50"/>
                                     <constraint firstItem="aal-Hn-NUf" firstAttribute="top" secondItem="F3s-gn-i4o" secondAttribute="topMargin" constant="-8" id="WTm-SR-zP1"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="aal-Hn-NUf" secondAttribute="trailing" constant="-8" id="p1V-ZK-zkE"/>
                                     <constraint firstItem="aal-Hn-NUf" firstAttribute="leading" secondItem="F3s-gn-i4o" secondAttribute="leadingMargin" constant="-8" id="vI6-HN-3Ph"/>
@@ -137,7 +137,7 @@
         <scene sceneID="XXu-Q3-g6e">
             <objects>
                 <collectionViewController storyboardIdentifier="TC_PREVIEW_PHOTOS_VC_0" title="Preview 1" hidesBottomBarWhenPushed="YES" id="KVG-va-4iw" customClass="TCPreviewPhotoCollectionViewController" customModule="Toony_Cam" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="o5o-3P-LnJ">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="o5o-3P-LnJ">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -150,7 +150,7 @@
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" reuseIdentifier="TC_PHOTOS_CELL_2" id="Ppm-KD-AGI">
                                 <rect key="frame" x="1" y="0.0" width="374" height="605"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="605"/>
                                     <autoresizingMask key="autoresizingMask"/>
@@ -215,7 +215,7 @@
         <scene sceneID="rTb-0p-gCY">
             <objects>
                 <collectionViewController storyboardIdentifier="TC_PHOTOS_VC_1" title="Favorites" id="7gr-r1-Cl1" customClass="TCPhotosCollectionViewController" customModule="Toony_Cam" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Ebt-wN-2Yu">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Ebt-wN-2Yu">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -354,7 +354,7 @@
         <scene sceneID="Jf9-vr-CYS">
             <objects>
                 <collectionViewController storyboardIdentifier="TC_PREVIEW_PHOTOS_VC_1" title="Preview 2" hidesBottomBarWhenPushed="YES" id="aNV-cm-WRl" customClass="TCPreviewPhotoCollectionViewController" customModule="Toony_Cam" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="hpb-E8-opq">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="hpb-E8-opq">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
