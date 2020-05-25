@@ -1,2 +1,0 @@
-<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
-<link rel="manifest" href="/manifest.json">
