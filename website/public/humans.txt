@@ -1,0 +1,44 @@
+
+
+PRODUCT
+
+Name: Toony Cam
+Description: An interactive camera app that applies cartoony filters to your selfies.
+Url: www.toonycam.com
+Twitter: @toonycam
+Facebook: www.facebook.com/Toony-Cam-1837054459870891/
+Google+: plus.google.com/b/102035563590582507938/102035563590582507938
+YouTube: www.youtube.com/channel/UC3YeCpnPJtq_caK01ivWCHg
+
+
+COMPANY
+
+Name: Parthenon Studios Ltd
+Site: www.parthenonstudios.com
+Twitter: @parthenonus
+Tumblr: tumblr.toonycam.com -or- toonycam.tumblr.com
+Google+: plus.google.com/+toonycam
+Facebook: www.facebook.com/toonycam
+
+
+TEAM MEMBER
+
+Name: Christopher W Gonzalez
+DKA: gchriswill
+Nickname: gchriswill
+Role: all/*
+Email: christopher@toonycam.com
+Site: www.gchriswill.me
+Github: gchriswill
+Medium: @gchriswill
+Twitter: @gchriswill
+Tumblr: tumblr.gchriswill.me -or- gchriswill.tumblr.com
+LinkedIn: www.linkedin.com/in/gchriswill
+Google+: plus.google.com/+christophergonzalezmelendez
+Facebook: www.facebook.com/christophergonzalezmelendez
+
+
+LICENSE
+
+Toony Cam's Web App By Christopher W. Gonzalez D.K.A "gchriswill" from Parthenon Studios.
+Copyright (c) 2016 Parthenon LLC. All rights reserved.
