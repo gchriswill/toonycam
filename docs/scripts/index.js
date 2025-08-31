@@ -8,7 +8,9 @@
 // });
 
 function alertingUser(){
-    alert("Hi there!\nThanks for visiting Toony Cam's website.\nA wild, fun and innovative project that started as a college project.\nPlease feel free to take a look at the publicly available archive  on Github.\nhttps://github.com/gchriswill/toonycam\n\n\"We hope to bring it back someday... 2.0 🤩\"");
+    if (window.confirm("Thanks for visiting Toony Cam's website.\n\nA wild, fun and innovative project that started as a college project.\n\nPlease feel free to take a look at the publicly available archive on GitHub.\n\n\"> We hope to bring it back someday... 2.0 🤩\"\n\nWould you like to visit the GitHub repository?")) {
+      window.open("https://github.com/gchriswill/toonycam", "_blank");
+    }
 }
 
 // Release Date Timer ==================================================================================================

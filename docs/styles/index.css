@@ -119,7 +119,6 @@ div#text-object-comingsoon{
 }
 
 div#text-object-comingsoon, h1 {
-	text-wrap-style: pretty;
 	font-size: 0.75em;
 	font-family: cursive;
 	line-height: 1.5em;
