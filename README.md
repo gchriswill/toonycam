@@ -106,6 +106,6 @@ Bellow, here are the Milestone cards on the and scehdule for this project. For m
 
 ---
 
-### License
+### NO LICENSE
 
-Copyright (C) 2016 Christopher Gonzalez. All rights reserved.
+Copyright (C) 2016-2025 Christopher W Gonzalez Melendez. All rights reserved.
