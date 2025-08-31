@@ -193,7 +193,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = "Parthenon Studios";
+				ORGANIZATIONNAME = "gchriswill";
 				TargetAttributes = {
 					D94B495E1DBE77660035335B = {
 						CreatedOnToolsVersion = 8.0;

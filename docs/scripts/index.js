@@ -1,6 +1,6 @@
 
-// JS Scripts By Christopher W. Gonzalez D.K.A "gchriswill" from Parthenon Studios Ltd
-// Copyright (c) 2016 Parthenon LLC. All rights reserved.
+// JS Scripts By Christopher W. Gonzalez D.K.A "gchriswill"
+// Copyright (c) 2016-2025 Christopher W Gonzalez Melendez. All rights reserved.
 
 // window.addEventListener("DOMContentLoaded", function() {
 //     //alertingUser();
@@ -8,7 +8,7 @@
 // });
 
 function alertingUser(){
-    alert("Hi there!\nThanks for visiting Toony Cam's website. It's currently being built. Please feel free to take a look around and let us know what you think by twetting us to @toonycam with the hashtag #toonyfeedback. The Toony Team will love to hear from you... 😉");
+    alert("Hi there!\nThanks for visiting Toony Cam's website.\nA wild, fun and innovative project that started as a college project.\nPlease feel free to take a look at the publicly available archive  on Github.\nhttps://github.com/gchriswill/toonycam\n\n\"We hope to bring it back someday... 2.0 🤩\"");
 }
 
 // Release Date Timer ==================================================================================================
