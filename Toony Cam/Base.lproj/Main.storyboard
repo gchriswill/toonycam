@@ -1,27 +1,509 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ciw-LQ-bID">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Camera View Controller-->
+        <!--Delegate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TCCameraViewController" customModule="Toony_Cam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TC_CAM_VC" id="BYZ-38-t0r" customClass="TCCameraViewController" customModule="Toony_Cam" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="redraw" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRA-ia-YIH" customClass="TCCamControlPanel" customModule="Toony_Cam" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="525" width="379" height="142"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOy-fq-5ae" customClass="TCCamButton" customModule="Toony_Cam" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="55" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="K9L-eX-rFN"/>
+                                            <constraint firstAttribute="width" constant="64" id="kbj-aW-rJD"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="ic_photo_library_white_48pt"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="tcShadowRadius">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="tcShadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="tcShadowOffset">
+                                                <size key="value" width="0.0" height="1.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="tcShadowOpacity">
+                                                <real key="value" value="0.40000000000000002"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <mask key="constraints">
+                                                <exclude reference="K9L-eX-rFN"/>
+                                                <exclude reference="kbj-aW-rJD"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="K9L-eX-rFN"/>
+                                                <exclude reference="kbj-aW-rJD"/>
+                                            </mask>
+                                        </variation>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7i6-9S-2SR" customClass="TCCamButton" customModule="Toony_Cam" customModuleProvider="target">
+                                        <rect key="frame" x="295" y="55" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="mEb-mt-vGR"/>
+                                            <constraint firstAttribute="width" constant="64" id="p8S-cc-3HT"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="ic_photo_filter_white_48pt"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="tcShadowOffset">
+                                                <size key="value" width="0.0" height="1.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="tcShadowRadius">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="tcShadowOpacity">
+                                                <real key="value" value="0.40000000000000002"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <mask key="constraints">
+                                                <exclude reference="mEb-mt-vGR"/>
+                                                <exclude reference="p8S-cc-3HT"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="mEb-mt-vGR"/>
+                                                <exclude reference="p8S-cc-3HT"/>
+                                            </mask>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNZ-ib-XKU" customClass="TCCamShotButton" customModule="Toony_Cam" customModuleProvider="target">
+                                        <rect key="frame" x="141.5" y="38" width="96" height="96"/>
+                                        <color key="backgroundColor" red="0.83529411760000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="GVZ-7B-3dp"/>
+                                            <constraint firstAttribute="height" constant="96" id="s6p-cP-mrE"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="ic_face_white_48pt">
+                                            <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="tcRadius">
+                                                <real key="value" value="48"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="tcShadowRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="tcShadowOpacity">
+                                                <real key="value" value="0.40000000000000002"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="tcShadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="tcShadowOffset">
+                                                <size key="value" width="0.0" height="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="FNZ-ib-XKU" firstAttribute="centerX" secondItem="bRA-ia-YIH" secondAttribute="centerX" id="1f3-hC-Adp"/>
+                                    <constraint firstItem="HOy-fq-5ae" firstAttribute="leading" secondItem="bRA-ia-YIH" secondAttribute="leading" constant="20" id="3Ee-dQ-g3W">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                    </constraint>
+                                    <constraint firstItem="HOy-fq-5ae" firstAttribute="bottom" secondItem="FNZ-ib-XKU" secondAttribute="bottom" constant="-15" id="B69-vx-3Qm"/>
+                                    <constraint firstAttribute="trailing" secondItem="7i6-9S-2SR" secondAttribute="trailing" constant="20" id="cSO-3H-7ID">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                    </constraint>
+                                    <constraint firstItem="FNZ-ib-XKU" firstAttribute="centerY" secondItem="bRA-ia-YIH" secondAttribute="centerY" constant="15" id="efg-5L-aHh">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="-22"/>
+                                        <variation key="heightClass=compact-widthClass=regular" constant="-22"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="142" id="hE7-0m-HFW"/>
+                                    <constraint firstAttribute="height" constant="142" id="oAI-Xt-PJp">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="276"/>
+                                    </constraint>
+                                    <constraint firstItem="7i6-9S-2SR" firstAttribute="bottom" secondItem="FNZ-ib-XKU" secondAttribute="bottom" constant="-15" id="p0l-0k-UnE"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="hE7-0m-HFW"/>
+                                        <exclude reference="oAI-Xt-PJp"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="subviews">
+                                        <exclude reference="HOy-fq-5ae"/>
+                                        <exclude reference="7i6-9S-2SR"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="hE7-0m-HFW"/>
+                                        <exclude reference="3Ee-dQ-g3W"/>
+                                        <exclude reference="B69-vx-3Qm"/>
+                                        <exclude reference="cSO-3H-7ID"/>
+                                        <exclude reference="p0l-0k-UnE"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="subviews">
+                                        <exclude reference="HOy-fq-5ae"/>
+                                        <exclude reference="7i6-9S-2SR"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="hE7-0m-HFW"/>
+                                        <exclude reference="oAI-Xt-PJp"/>
+                                        <exclude reference="3Ee-dQ-g3W"/>
+                                        <exclude reference="B69-vx-3Qm"/>
+                                        <exclude reference="cSO-3H-7ID"/>
+                                        <exclude reference="p0l-0k-UnE"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="oAI-Xt-PJp"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="oAI-Xt-PJp"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="camShotButton" destination="FNZ-ib-XKU" id="MhR-zj-GK2"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="YxA-BC-3nD"/>
+                                    <outlet property="filterLibrary" destination="7i6-9S-2SR" id="ijX-Ap-xRU"/>
+                                    <outlet property="photoLibrary" destination="HOy-fq-5ae" id="xp4-zg-AwH"/>
+                                </connections>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="edS-kB-aO8">
+                                <rect key="frame" x="0.0" y="481" width="375" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="veK-5E-mCi"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="60" minimumInteritemSpacing="0.0" id="pgD-Lz-GRe">
+                                    <size key="itemSize" width="60" height="60"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="favCell" id="1bq-g8-Qix" customClass="TCFavoriteFiltersCollectionViewCell" customModule="Toony_Cam" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="0.0" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filter_0" translatesAutoresizingMaskIntoConstraints="NO" id="5sa-24-e5K">
+                                                    <rect key="frame" x="8" y="8" width="45" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="5sa-24-e5K" secondAttribute="height" multiplier="1:1" id="VWL-xw-cbO"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="5sa-24-e5K" firstAttribute="leading" secondItem="1bq-g8-Qix" secondAttribute="leadingMargin" id="Aj9-6f-ESv"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="5sa-24-e5K" secondAttribute="trailing" constant="-1" id="a6f-SP-SFe"/>
+                                            <constraint firstItem="5sa-24-e5K" firstAttribute="top" secondItem="1bq-g8-Qix" secondAttribute="topMargin" id="nWt-Jv-VX6"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="5sa-24-e5K" secondAttribute="bottom" constant="-1" id="zHQ-cI-zgy"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageCell" destination="5sa-24-e5K" id="kGh-j1-arH"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="LZD-nU-izj"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3j1-uZ-BRi"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="bRA-ia-YIH" secondAttribute="trailing" constant="-20" id="0dp-Vj-YOP">
+                                <variation key="heightClass=compact-widthClass=regular" constant="-20"/>
+                            </constraint>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bRA-ia-YIH" secondAttribute="bottom" id="2bC-tX-6zP">
+                                <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="bRA-ia-YIH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="8Kg-GV-LcU">
+                                <variation key="heightClass=compact-widthClass=compact" constant="406"/>
+                            </constraint>
+                            <constraint firstItem="edS-kB-aO8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="FZL-7Z-a75"/>
+                            <constraint firstItem="bRA-ia-YIH" firstAttribute="top" secondItem="edS-kB-aO8" secondAttribute="bottom" constant="-16" id="Lft-rd-K8f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="edS-kB-aO8" secondAttribute="trailing" constant="-16" id="aqV-CM-q2H"/>
+                            <constraint firstItem="bRA-ia-YIH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ig1-Rc-LwP"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8Kg-GV-LcU"/>
+                                <exclude reference="ig1-Rc-LwP"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="8Kg-GV-LcU"/>
+                                <include reference="ig1-Rc-LwP"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="ig1-Rc-LwP"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="8Kg-GV-LcU"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="8Kg-GV-LcU"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="u79-t9-GnF">
+                        <leftBarButtonItems>
+                            <barButtonItem tag="1" image="ic_account_circle_white_36pt" id="E17-Ta-Af8">
+                                <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-14"/>
+                                <color key="tintColor" red="0.77647058820000003" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </variation>
+                                <connections>
+                                    <action selector="userAccountButtonAction:" destination="BYZ-38-t0r" id="ygt-ks-fpK"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem tag="2" image="ic_photo_library_white_36pt" id="IrA-sG-mBg">
+                                <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-14"/>
+                                <color key="tintColor" red="0.77647058820000003" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </variation>
+                                <connections>
+                                    <action selector="helpAction:" destination="BYZ-38-t0r" id="9dw-OO-wOW"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <rightBarButtonItems>
+                            <barButtonItem tag="200" enabled="NO" image="ic_camera_rear_white_36pt" id="Ldw-dN-z8t">
+                                <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-16"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="cameraToggle:" destination="BYZ-38-t0r" id="78I-FQ-nEF"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem tag="101" enabled="NO" image="ic_flash_auto_white_36pt" id="7I1-T2-nnU">
+                                <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-14"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="flashToogle:" destination="BYZ-38-t0r" id="ReF-t9-JOc"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="camControlPanel" destination="bRA-ia-YIH" id="G3h-uX-Nu6"/>
+                        <outlet property="filterCollectionView" destination="edS-kB-aO8" id="XUz-hn-oW6"/>
+                        <segue destination="DUi-zC-gPo" kind="presentation" identifier="FROM_CAM_TO_AUTH" id="Fhv-nt-3je"/>
+                        <segue destination="5dE-f3-aaM" kind="presentation" identifier="FROM_CAM_TO_ACC" id="FHu-eP-IfA"/>
+                        <segue destination="844-gH-KBB" kind="presentation" identifier="FROM_CAM_TO_FILTERS" id="Ojp-R2-Cpn"/>
+                        <segue destination="9IW-pL-FbW" kind="presentation" identifier="FROM_CAM_TO_PHOTOS" id="vhw-Cu-3ge"/>
+                        <segue destination="qFh-VM-xcs" kind="presentation" identifier="FROM_CAM_TO_PREVIEW" id="Lj6-Wb-Ut3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2017.5" y="135.21126760563379"/>
+        </scene>
+        <!--Toony Preview-->
+        <scene sceneID="h6C-nU-ywY">
+            <objects>
+                <viewController title="Toony Preview" id="GnP-Yk-dKD" customClass="TCPreviewImageViewController" customModule="Toony_Cam" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L2n-t8-SCA"/>
+                        <viewControllerLayoutGuide type="bottom" id="hXR-rd-enS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gyk-D0-Ssh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9gj-xW-kXb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0DF-hG-mxe">
+                                <rect key="frame" x="287" y="575" width="72" height="72"/>
+                                <color key="backgroundColor" red="0.77647058820000003" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="dPi-rj-jxl"/>
+                                    <constraint firstAttribute="width" constant="72" id="sgC-ch-KJK"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="ic_share_white_36pt"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="36"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="shareAction:" destination="GnP-Yk-dKD" eventType="touchUpInside" id="F6O-9Z-n87"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="zsJ-YV-AVx">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="QYQ-JW-MZX"/>
+                                    <constraint firstAttribute="width" constant="37" id="WGr-8h-ehT"/>
+                                </constraints>
+                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9gj-xW-kXb" firstAttribute="top" secondItem="L2n-t8-SCA" secondAttribute="bottom" constant="-64" id="AfS-Tp-Akc"/>
+                            <constraint firstItem="zsJ-YV-AVx" firstAttribute="centerY" secondItem="Gyk-D0-Ssh" secondAttribute="centerY" id="Iq9-wj-iZd"/>
+                            <constraint firstItem="hXR-rd-enS" firstAttribute="top" secondItem="9gj-xW-kXb" secondAttribute="bottom" id="W8a-Ie-Tdk"/>
+                            <constraint firstItem="hXR-rd-enS" firstAttribute="top" secondItem="0DF-hG-mxe" secondAttribute="bottom" constant="20" id="aub-MK-Ipx"/>
+                            <constraint firstItem="9gj-xW-kXb" firstAttribute="leading" secondItem="Gyk-D0-Ssh" secondAttribute="leadingMargin" constant="-16" id="buJ-8b-Xlb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0DF-hG-mxe" secondAttribute="trailing" id="l6v-bY-zoF"/>
+                            <constraint firstItem="zsJ-YV-AVx" firstAttribute="centerX" secondItem="Gyk-D0-Ssh" secondAttribute="centerX" id="rUw-hJ-Ypb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9gj-xW-kXb" secondAttribute="trailing" constant="-16" id="s2e-YQ-5Xr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OeV-ls-ejL">
+                        <barButtonItem key="leftBarButtonItem" image="ic_close_white_36pt" id="rTy-Ec-D4Q">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="closeAction:" destination="GnP-Yk-dKD" id="ijQ-zG-anK"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="ic_done_white_36pt" id="Jg4-Ng-j0l">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="SaveAction:" destination="GnP-Yk-dKD" id="N7i-K2-ykv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="zsJ-YV-AVx" id="F57-sn-gzo"/>
+                        <outlet property="previewImage" destination="9gj-xW-kXb" id="n2p-il-Vhu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Prd-8N-bsu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3015" y="1089.0845070422536"/>
+        </scene>
+        <!--Root Navigation Controller-->
+        <scene sceneID="bLX-ij-sps">
+            <objects>
+                <navigationController storyboardIdentifier="TC_ROOT_NAV_VC" automaticallyAdjustsScrollViewInsets="NO" id="ciw-LQ-bID" customClass="TCRootNavigationController" customModule="Toony_Cam" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xN7-RN-8e0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Drm-gm-ERq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fZB-Np-ifU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="812" y="138"/>
+        </scene>
+        <!--TC_AUTH_NAV_VC-->
+        <scene sceneID="n03-Id-s38">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="TC_AUTH_NAV_VC" storyboardName="Auth" referencedIdentifier="TC_AUTH_NAV_VC" id="DUi-zC-gPo" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hEh-G9-Hvy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2922" y="-96"/>
+        </scene>
+        <!--TC_ACC_NAV_VC-->
+        <scene sceneID="bvE-tK-Yeh">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="TC_ACC_NAV_VC" storyboardName="Account" referencedIdentifier="TC_ACC_NAV_VC" id="5dE-f3-aaM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b9S-am-PeQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2663" y="-148"/>
+        </scene>
+        <!--TC_FILTERS_TAB_VC-->
+        <scene sceneID="GRk-Ww-Lap">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="TC_FILTERS_TAB_VC" storyboardName="Filters" referencedIdentifier="TC_FILTERS_TAB_VC" id="844-gH-KBB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PVD-jE-vxm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2933" y="138"/>
+        </scene>
+        <!--TC_PHOTOS_TAB_VC-->
+        <scene sceneID="plF-Bo-Sic">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Photos" referencedIdentifier="TC_PHOTOS_TAB_VC" id="9IW-pL-FbW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wvU-hN-A32" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2934" y="279"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QQI-2Z-QJX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qFh-VM-xcs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rnq-32-kou">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GnP-Yk-dKD" kind="relationship" relationship="rootViewController" id="4Xg-7M-JMu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aGp-sz-J5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2017.5" y="1089.0845070422536"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="filter_0" width="256" height="256"/>
+        <image name="ic_account_circle_white_36pt" width="36" height="36"/>
+        <image name="ic_camera_rear_white_36pt" width="36" height="36"/>
+        <image name="ic_close_white_36pt" width="36" height="36"/>
+        <image name="ic_done_white_36pt" width="36" height="36"/>
+        <image name="ic_face_white_48pt" width="48" height="48"/>
+        <image name="ic_flash_auto_white_36pt" width="36" height="36"/>
+        <image name="ic_photo_filter_white_48pt" width="48" height="48"/>
+        <image name="ic_photo_library_white_36pt" width="36" height="36"/>
+        <image name="ic_photo_library_white_48pt" width="48" height="48"/>
+        <image name="ic_share_white_36pt" width="36" height="36"/>
+    </resources>
 </document>
