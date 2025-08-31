@@ -118,8 +118,9 @@ div#text-object-comingsoon{
 	text-shadow: -1px 1px 8px rgba(0,0,0, 0.5);
 }
 
-div#text-object-comingsoon h1{
-	font-size: 3em;
+div#text-object-comingsoon, h1 {
+	text-wrap-style: pretty;
+	font-size: 0.75em;
 	font-family: cursive;
 	line-height: 1.5em;
 	padding-left: 16px;
