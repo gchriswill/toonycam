@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+HTML5 markup By Christopher W. Gonzalez D.K.A "gchriswill"
+Copyright (c) 2016-2025 Christopher W Gonzalez Melendez. All rights reserved.
+-->
+
+	<head>
+
+		<meta charset="utf-8"/>
+		<title>Toony Cam</title>
+
+
+		<!-- Default Meta-Supported -->
+		<meta name="title" content="Toony Cam"/>
+		<meta name="description" content="An interactive camera app that applies cartoony filters to your selfies."/>
+		<meta name="keywords" content="Toony Cam, Toony Lens, Toony Magic, toonycam, toonyapp, toony camera, toony cam app, toonylens, toonymagic"/>
+
+
+		<meta name="viewport" content="initial-scale=1.0, width=device-width", userScalable=no/>
+
+
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="favicon.ico"/>
+
+
+		<!-- Toony CSS stylesheet -->
+		<link type="text/css" rel="stylesheet" href="styles/index.css"/>
+
+
+		<!-- Material Icons via Google Web Fonts -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+		<!-- For Humans -->
+		<meta name="author" content="Christopher W Gonzalez Melendez"/>
+		<meta name="Copyright" content="Copyright (c) 2016-2025 Christopher W Gonzalez Melendez. All rights reserved."/>
+
+
+		<!-- For Robots -->
+		<meta name="robots" content="all"/>
+		<meta name="robots" content="index, follow"/>
+		<meta name="st:robots" content="follow, index"/>
+
+
+		<!-- For Search Engines -->
+		<script type="application/ld+json" async=true>
+			[{
+			  "@context": "http://schema.org/",
+			  "@type": "MobileApplication",
+			  "name": "Toony Cam",
+			  "image": "https://www.toonycam.com/assets/images/app_icon_small-mini.png",
+			  "description": "An interactive camera app that applies cartoony filters to your selfies!",
+			  "url": "https:///www.toonycam.com",
+			  "downloadUrl": "https:///www.toonycam.com",
+			  "applicationCategory": "Photo & Video",
+			  "operatingSystem": "iOS",
+			  "about":{
+			  	"@type": "Thing",
+			    "description": "An interactive camera app that applies cartoony filters to your selfies!"
+			  },
+			  "aggregateRating": {
+			    "@type": "AggregateRating",
+			    "ratingValue": "5",
+			    "reviewCount": "1207"
+			  },
+			  "author":{
+			  	"@type": "Person",
+			    "name": "Christopher",
+			    "familyName": "Gonzalez Melendez",
+			    "additionalName": "Will",
+			    "alternateName": "gchriswill",
+			    "url": "http://www.gchriswill.me"
+			  },
+			  "creator":{
+			  	"@type": "Person",
+			    "name": "Christopher",
+			    "familyName": "Gonzalez",
+			    "additionalName": "Will",
+			    "alternateName": "gchriswill",
+			    "url": "http://www.gchriswill.me"
+			  }
+		  	},{
+			  "@context": "http://schema.org",
+			  "@type": "WebSite",
+			  "name": "Toony Cam",
+			  "url": "http://www.toonycam.com",
+			  "image": "https://www.toonycam.com/assets/images/app_icon_small-mini.png",
+			  "description": "An interactive camera app that applies cartoony filters to your selfies!",
+			  "about":{
+			  	"@type": "Thing",
+			    "description": "An interactive camera app that applies cartoony filters to your selfies!"
+			  }
+			}]
+		</script>
+
+
+		<!-- Toony Cam's Twitter's Card Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image"/>
+		<meta name="twitter:site" content="@toonycam"/>
+		<meta name="twitter:creator" content="@gchriswill"/>
+		<meta name="twitter:title" content="Toony Cam's Website"/>
+		<meta name="twitter:image:alt" content="Toony Cam's Branding Logo"/>
+		<meta name="twitter:image" content="https://www.toonycam.com/assets/images/app_ws.png"/>
+		<meta name="twitter:description" content="An interactive camera app that applies cartoony filters to your selfies."/>
+
+
+		<!-- Open Graph Meta-Supported -->
+		<meta property="og:type" content="product"/>
+		<meta property="fb:app_id" content="340775029612342"/>
+		<meta property="og:title" content="Toony Cam's Website"/>
+		<meta property="og:url" content="https://www.toonycam.com"/>
+		<meta property="og:image:type" content="image/png"/>
+		<meta property="og:image" content="https://www.toonycam.com/assets/images/app_ws.png"/>
+		<meta property="og:description" content="An interactive camera app that applies cartoony filters to your selfies."/>
+
+
+		<!-- Google Meta-Supported -->
+		<meta name="google" content="translate"/>
+		<meta name="google-site-verification" content="9ox8XBiKml4s5kYsx5svk02YhwYvjZbKBMvz9aoiUuI"/>
+
+
+		<!-- Android Meta-Supported -->
+		<meta name="mobile-web-app-capable" content="yes"/>
+		<link rel="icon" type="image/png" sizes="192x192" href="assets/images/android/android-icon-192x192.png"/>
+		<link rel="manifest" href="assets/images/android/manifest.json"/>
+
+
+		<!-- Apple iOS Safari Meta-Supported -->
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="apple-mobile-web-app-title" content="Toony Cam Web"/>
+		<link rel="apple-touch-startup-image" href="assets/images/app_icon_large.png"/>
+		<link rel="apple-touch-icon" sizes="57x57" href="assets/images/ios/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="assets/images/ios/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="assets/images/ios/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="assets/images/ios/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="assets/images/ios/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="assets/images/ios/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="assets/images/ios/apple-touch-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/images/ios/apple-touch-icon-180x180.png">
+		<link rel="apple-touch-icon" sizes="167x167" href="assets/images/ios/apple-touch-icon-167x167.png">
+
+
+		<!-- Windows 10 Meta-Supported -->
+		<meta name="application-name" content="Toony Cam"/>
+		<meta name="msapplication-TileImage" content="https://www.toonycam.com/assets/images/app_icon_small-mini.png"/>
+		<meta name="msapplication-square70x70logo" content="https://www.toonycam.com/assets/images/app_icon_small-mini.png"/>
+		<meta name="msapplication-square150x150logo" content="https://www.toonycam.com/assets/images/app_icon_small-mini.png"/>
+		<meta name="msapplication-square310x310logo" content="https://www.toonycam.com/assets/images/app_icon_small-mini.png"/>
+
+	</head>
+
+
+	<body>
+
+		<!-- Top Navigation Bar component -->
+		<nav>
+
+			<!-- Side Navigation Add-On Toogle Button component -->
+			<div id="hmenu" onclick="toogleNav()">
+					<i id="hmenu_mb" class="material-icons">menu</i>
+			</div>
+
+			<!-- G Counter component -->
+			<div id="clockdiv">
+				<div>
+					<span class="days"></span>
+					<div class="smalltext">DD</div>
+				</div>
+				<div>
+					<span class="hours"></span>
+					<div class="smalltext">HH</div>
+				</div>
+				<div>
+					<span class="minutes"></span>
+					<div class="smalltext">MM</div>
+				</div>
+				<div>
+					<span class="seconds"></span>
+					<div class="smalltext">SS</div>
+				</div>
+			</div>
+
+		</nav>
+
+
+		<!-- Main content component -->
+		<main>
+
+			<div id="top-object-background"></div>
+
+
+			<div id="center-object-background"></div>
+
+
+			<div id="text-object-comingsoon">
+				<h1>A never-released, wild, fun and exciting project... 🎢,<br>But through it, we achieved many wonders... 🤩</h1>
+			</div>
+
+
+			<div id="logo-container">
+				<img itemprop="image" id="toony-logo" src="assets/images/toonylens-mini.png" alt="Toony Cam, toonycam"/>
+			</div>
+
+
+			<!-- Store Badges component -->
+			<div id="app-store-banners">
+				<div id="aasb-container">
+					<img id="aasb" src="assets/images/badges/appstore_badge-mini.png" alt="Apple App store's download badge"/>
+				</div>
+				<!-- <div id="gpsb-container">
+					<img id="gpsb" src="assets/images/badges/googleplay_badge-mini.png" alt="Play Store's download badge"/>
+				</div> -->
+			</div>
+
+		</main>
+
+
+		<!-- Footer Bar component -->
+		<footer>
+
+			<p id="copyr">
+
+				<b>Copyright</b>
+				<span id="copys">©️</span>
+				<b>2016-2025 Christopher W Gonzalez Melendez. All rights reserved.</b>
+				<br>
+				<b>
+					Designed and built with ❤️ by
+					<a href="https://github.com/gchriswill">@gchriswill</a>
+				</b>
+
+			</p>
+
+		</footer>
+
+
+		<!-- Side Navigation component -->
+		<div id="navid" class="sidenav">
+
+			<!-- <a href="#" onclick="alertingUser()">
+				<i class="material-icons">home</i>
+			</a> -->
+			<!-- <a href="#" onclick="alertingUser()"><i class="material-icons">whatshot</i></a> -->
+			<!-- <a href="#" onclick="alertingUser()"><i class="material-icons">description</i></a> -->
+			<!-- <a href="#" onclick="alertingUser()"><i class="material-icons">info</i></a> -->
+			<a href="#" onclick="alertingUser()"><i class="material-icons">help</i></a>
+
+		<!-- http://twitter.com/home?status=Hello+from+%40toonycam+'s+website!%0A%23toonydevteam+%23toonycam+%23toonylens+%23toonymagic"
+		-->
+
+		</div>
+
+
+		<script type="text/javascript" src="scripts/index.js" async=true></script>
+
+
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-89936108-1', 'auto');
+			ga('require', 'displayfeatures');
+			ga('send', 'pageview');
+		</script>
+
+	</body>
+</html>

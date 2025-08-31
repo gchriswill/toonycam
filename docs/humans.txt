@@ -1,0 +1,21 @@
+/* PRODUCT */
+Name: Toony Cam
+Description: An interactive camera app that applies cartoony filters to your selfies.
+Url: www.toonycam.com
+Twitter: @toonycam
+Facebook: www.facebook.com/Toony-Cam-1837054459870891/
+YouTube: www.youtube.com/channel/UC3YeCpnPJtq_caK01ivWCHg
+
+
+/* TEAM */
+Name: Christopher W Gonzalez Melendez
+Username: gchriswill
+Role: all/*
+Site: www.gchriswill.me
+Github: @gchriswill
+LinkedIn: www.linkedin.com/in/gchriswill
+
+
+/* LICENSE */
+Description: Toony Cam's web application by Christopher W. Gonzalez Melendez A.K.A "gchriswill".
+Copyright: Copyright (c) 2016-2025 Christopher W Gonzalez Melendez. All rights reserved.

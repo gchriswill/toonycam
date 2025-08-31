@@ -3,7 +3,7 @@
 //  Toony CamTests
 //
 //  Created by Christopher Gonzalez on 10/24/16.
-//  Copyright © 2016 Parthenon Studios. All rights reserved.
+//  Copyright (c) 2016-2025 Christopher W Gonzalez Melendez. All rights reserved.
 //
 
 import XCTest
