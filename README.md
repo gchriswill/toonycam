@@ -45,7 +45,6 @@ The purposes of this repo are:
 **Student:** Christopher Gonzalez D.K.A. "[@gchriswill](https://github.com/gchriswill)" : Developer  
 
 **Website:** [Toony Cam](https://www.toonycam.com)  
-**Github Repository:** [Toony Cam App Repository](#)  
 
 
 ### Current Status:
@@ -62,22 +61,6 @@ Detailed current status brief...
 - iPhone 5s
 - iPhone SE
 - iPhone 6s
-
-### Overview Video:
-
-An in-depth and 20 minutes long, project overview and usage guide.
-Overview video [here](#)
-
-### Google Drive Location:
-
-[Toony Cam's Folder Location](https://drive.google.com/drive/u/0/folders/0B7ReMDLGCLolT3Q4OW5HRTE0eU0)  
-
-The project's source folder includes:
-
-- Project's full documentation
-- Project's UI assets
-- Project's User Tests
-- High and low resolution videos
 
 ---
 
@@ -99,10 +82,10 @@ The project's source folder includes:
 
 Bellow, here are the Milestone cards on the and scehdule for this project. For more information, please visit the Project and Wiki of this repository.
 
-- [ ] [Milestone 1 - ALPHA](https://github.com/gchriswill/1611-IPY-FINAL/milestone/1)
-- [ ] [Milestone 2 - BETA](https://github.com/gchriswill/1611-IPY-FINAL/milestone/2)
-- [ ] [Milestone 3 - Release Candidate](https://github.com/gchriswill/1611-IPY-FINAL/milestone/3)
-- [ ] [Milestone 4 - GOLDEN MASTER](https://github.com/gchriswill/1611-IPY-FINAL/milestone/4)
+- [x] [Milestone 1 - ALPHA](https://github.com/gchriswill/1611-IPY-FINAL/milestone/1)
+- [x] [Milestone 2 - BETA](https://github.com/gchriswill/1611-IPY-FINAL/milestone/2)
+- [x] [Milestone 3 - Release Candidate](https://github.com/gchriswill/1611-IPY-FINAL/milestone/3)
+- [x] [Milestone 4 - GOLDEN MASTER](https://github.com/gchriswill/1611-IPY-FINAL/milestone/4)
 
 ---
 
