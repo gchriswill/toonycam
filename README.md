@@ -42,8 +42,7 @@ The purposes of this repo are:
 **Institution:** [Full Sail university](http://www.fullsail.edu)  
 **Course:** Integrated Product Deployment  
 **Program:** Mobile Development B.S. (MDVBS)  
-**Student:** Christopher Gonzalez D.K.A. "[@gchriswill](https://github.com/gchriswill)" : Developer  
-
+**Student:** Christopher Gonzalez D.K.A. "[@gchriswill](https://github.com/gchriswill)"  
 **Website:** [Toony Cam](https://www.toonycam.com)  
 
 
